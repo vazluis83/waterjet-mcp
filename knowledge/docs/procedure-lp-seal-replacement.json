@@ -1,0 +1,17 @@
+{
+ "id": "procedure-lp-seal-replacement",
+ "title": "Procedure (pictures): replacement of intensifier low-pressure (hydraulic) seals - vymena tesneni NT",
+ "kind": "procedure",
+ "language": "cs",
+ "vendor": "PTV / Flow pictures",
+ "source_file": "výměna těsnění NT.doc",
+ "pages": [
+  {
+   "page": 1,
+   "text": "Legacy Word document with pictures only (text could not be extracted). Czech title \"vymena tesneni NT\" = replacement of the low-pressure (hydraulic) seals of the intensifier. Pictures show: the hydraulic manifold block, the hydraulic cylinder bore, driving the end-bell oil seal in with a mallet and installation sleeve, mounting the end bell / cylinder on the intensifier assembly fixture, pulling the end bells on with the tie rods, the complete H2O Jet intensifier, and a blue hydraulic cylinder liner. Use get_document_images to view them and the H2O Jet intensifier manual sections 2.6 (End Bells) and 4 (Piston service) for the written procedure."
+  }
+ ],
+ "format": "doc",
+ "images": 8,
+ "has_page_images": false
+}

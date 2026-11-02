@@ -1,0 +1,46 @@
+{
+  "name": "waterjet-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing the documentation, electrical schematics, servo-drive parameters and maintenance procedures of a PTV WJ3020B water jet cutting machine with a JETS 3.8/60-COMPACT high-pressure pump.",
+  "type": "module",
+  "bin": {
+    "waterjet-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "knowledge",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsc -p tsconfig.json && node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "waterjet",
+    "cnc",
+    "ptv",
+    "servostar",
+    "maintenance"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "minisearch": "^7.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@mlightcad/libredwg-web": "^0.8.3",
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3"
+  }
+}

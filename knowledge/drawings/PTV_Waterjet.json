@@ -1,0 +1,18 @@
+{
+ "file": "PTV Waterjet.dwg",
+ "version": {
+  "type": "r2007",
+  "hdr": "AC1021",
+  "description": "AutoCAD Release 2007",
+  "version": 27
+ },
+ "layers": [
+  "0",
+  "DEFPOINTS"
+ ],
+ "entity_counts": {
+  "LWPOLYLINE": 22493,
+  "VIEWPORT": 2
+ },
+ "texts": []
+}

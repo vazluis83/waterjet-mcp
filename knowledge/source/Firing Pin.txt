@@ -1,0 +1,6 @@
+The
+minimum size is 29.2mm.
+
+
+The actuator with the magnet has a maximum size of 56.89mm and a minimum
+size of 56.64mm."

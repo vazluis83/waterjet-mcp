@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "waterjet": {
+      "command": "node",
+      "args": ["C:/Repos/waterjet-mcp/dist/index.js"]
+    }
+  }
+}

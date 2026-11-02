@@ -1,0 +1,196 @@
+{
+  "procedures": [
+    {
+      "id": "pump-start-ordinary",
+      "title": "Ordinary start of the JETS 3.8/60 pump",
+      "source": "pump-manual page 17, section 3.3",
+      "steps": [
+        "Open the water supply to the filtering unit; check 3-6 bar on the manometers.",
+        "Visually check both water supplies to the intensifier for leaks.",
+        "Close the HP valve on the HP line to the cutting table.",
+        "CHECK that the ball valves and the slide valve under the tank are FULLY OPEN (otherwise the hydraulic pump and cooler pump are destroyed).",
+        "Switch on the main switch on the main distributor.",
+        "Press START; wait until operation is stable, check the machine visually.",
+        "Press '1' (approx. 30 bar oil); wait until stable, check again.",
+        "Select the required pressure level with '0'-'9'; wait until stable.",
+        "Slowly open the HP valve to the HP piping.",
+        "Check machine and HP piping, close covers. Never run without a nozzle in the cutting head.",
+        "Normal manometer swing on HK2: 170-210 bar; normal stroke rate 80-90/min, max 110/min."
+      ]
+    },
+    {
+      "id": "pump-stop",
+      "title": "Normal stop and emergency stop of the pump",
+      "source": "pump-manual page 17, sections 3.4-3.5",
+      "steps": ["Press '0' to drop the oil pressure to zero.", "Run about 1 minute at zero pressure to stabilise oil temperature.", "Press STOP.", "Switch off the main switch.", "Close the water supply to the filtering unit.", "Open covers, inspect for leaks, close covers.", "EMERGENCY: press TOTAL STOP (latches), switch off the main switch, find and repair the fault, reset."]
+    },
+    {
+      "id": "pump-first-start-or-after-oil-change",
+      "title": "First start / start after oil change or long standstill",
+      "source": "pump-manual page 16, section 3.2 (producer's engineer only for the very first start)",
+      "steps": [
+        "Fill the hydraulic pump housing and the leakage line with oil through the disconnected hoses, then reconnect.",
+        "Fill the tank to about 5 mm (15 mm after an oil change) below the top of the sight glass, using a 5 um filling filter unit.",
+        "Open the water supply with the intensifier hoses disconnected and flush for 3 minutes, then reconnect.",
+        "Check for leaks; check water pressure and filter condition; close the HP valve to the table.",
+        "Check all tank ball valves and the slide valve are fully open.",
+        "Main switch on; press START, after ~10 s STOP; repeat at least 4 times to fill the hydraulic circuits; then START.",
+        "Press '1' (30 bar), wait until stable; open the HP valve slowly, open the table ON/OFF valve with a nozzle of correct size fitted.",
+        "Step up: '2' (51 bar) 5 min, '4' (103 bar) 5 min, '6' (138 bar) 5 min, '8' (195 bar) 5 min, '9' (212 bar); visual checks at each step, stop at any leak or irregularity.",
+        "Vibrations at start-up = air in the hydraulic control elements: stop and restart several times. Oil below 10 C blocks pressure increase."
+      ]
+    },
+    {
+      "id": "pump-oil-change",
+      "title": "Hydraulic oil and return filter change",
+      "source": "pump-manual pages 22-23, section 4.2",
+      "steps": [
+        "Change with the oil still warm, machine stopped and main switch off. Prepare ~170 l of oil.",
+        "Loosen the drain plug on the tank drain ball valve KV2, fit the hose, pump the oil out with the filtering filling unit into a barrel; dispose of it ecologically.",
+        "Open the tank covers (PN) and clean all sediments from the tank.",
+        "Replace the return filter ZF cartridge (loosen the top cover, lift out the cartridge, fit new, close).",
+        "Unscrew the suction filter SF inside the tank (right opening), wash in degreaser, rinse with hot pressure water against the flow direction, dry, refit; replace it every second oil change (4000 Mth).",
+        "Check the plastic element of the pump coupling S; check the filler sieve NZ.",
+        "Fill through a 5 um filter to about 15 mm under the top of the sight glass.",
+        "Start without pressure with the HP output open, press '1' to 30 bar for at least 10 s, then follow the first-start procedure.",
+        "If any hoses were disconnected: fill the hydraulic pump with oil through the delivery and leakage hoses before starting. NEVER start without a full oil fill.",
+        "Reset the counter: MAIN MENU -> PASSWORD (level A) -> SERVICING -> 'Servis oil done?' -> confirm (see procedure-pump-reset-oil)."
+      ]
+    },
+    {
+      "id": "pump-reset-service-counter",
+      "title": "Reset the check-valve or oil service counter on the pump panel",
+      "source": "documents procedure-pump-reset-check-valve and procedure-pump-reset-oil",
+      "steps": [
+        "Right arrow -> MAIN MENU; down arrow to PASSWORD, confirm with right arrow.",
+        "MODE opens the password fields; type the 4-digit level A password with 0-9; ENTER; the new access level (A/B/C) is shown; ESC returns to the main screen.",
+        "Right arrow -> MAIN MENU; down arrow to SERVICING, confirm with right arrow.",
+        "Down arrow to 'Servis CHV done?' (check valves) or 'Servis oil done?' (oil & filter), confirm with the right arrow (x->).",
+        "The Mth field for that service restarts from zero; the warning disappears."
+      ]
+    },
+    {
+      "id": "check-valve-service",
+      "title": "Intensifier check valve service and lapping",
+      "source": "pump-manual pages 33-36; intensifier-manual pages 16-20; drawing check-valve-machining",
+      "symptoms": ["HP water temperature at the outlet fitting above 49 C (outlet poppet back-flow)", "hydraulic piston slams at end of stroke (inlet poppet back-flow)", "repetitive spiking of the HP water pressure", "check valve temperature warning >= 40 C on the pump display"],
+      "steps": [
+        "Shut down, lock out, bleed the HP lines; disconnect the LP quick-disconnect and the HP line (two wrenches); remove the outlet body (contains outlet poppet and spring) and the insert/seat.",
+        "Note the check valve orientation; loosen the end cap with the spanner wrench and a mallet; unscrew by hand so the check valve body rotates with the end cap; press the body out with the thumbs.",
+        "Remove the retainer screw, support assembly and inlet poppet; clean parts separately in solvent; inspect o-rings, sealing faces, erosion, cracks.",
+        "Lap: 320 then 600 grit (pump manual) or 400 then 600 grit on a granite block (intensifier manual) with a few drops of water in a figure-eight; finish with a cross-hatch pass on 400 grit; minimum thickness after lapping: outlet poppet seat insert 8.89 mm (0.350 in), inlet poppet 3.05 mm (0.120 in); see drawing 301002-X for machining allowances when lapping cannot restore the face.",
+        "Reassemble: Blue lubricant on the insert radius, outlet body face and threads; spring and poppet small end first; Loctite 242 on the retainer screw, torque 4.5-7 Nm; poppet seat rounded side towards the body with a thin film of Blue lubricant on the rounded face only; o-rings with food grade lube.",
+        "Press the check valve into the end cap, thread the end cap onto the cylinder (rotate together), torque the end cap max 75 Nm by spanner taps (or 115 Nm with the H2O Jet torque tool); outlet body 67 Nm.",
+        "Reconnect, run 5 minutes at idle pressure checking for leaks and unusual noise; reset the CHV service counter."
+      ]
+    },
+    {
+      "id": "hp-seal-change",
+      "title": "High-pressure cylinder seal change (plunger seals)",
+      "source": "pump-manual pages 28-32; intensifier-manual pages 9-13",
+      "steps": [
+        "Shut down, lock out, bleed; disconnect LP and HP lines; remove the end cap with the check valve; unscrew the HP cylinder with a girth/strap wrench supporting its weight; slide it off the plunger carefully.",
+        "Remove the HP seals with the aluminium seal removal tool and a plastic mallet only; remove and inspect the backup sleeve; discard the seal ring/hoop; inspect the plunger (mirror finish, no scratches) and the cylinder bore against a bright surface - any damage = replace the cylinder.",
+        "Install new seals with the SR1 kit: adapter flange + tapered sleeve compressor + seal plunger; food grade grease on the seal kit, o-ring facing in; dynamic (flat) end first, then the backup sleeve, then the other end.",
+        "Blue lubricant on the cylinder threads, food grade grease on the plunger; thread the cylinder on hand tight only (if it turns more than 1/8 turn further the hoop is dislodged - remove and check).",
+        "Refit check valve and end cap, reconnect lines (13/16 wrench with backup wrench), run at low pressure without orifice to flush, then at pressure with the orifice to check for leaks.",
+        "Backup ring / seal ring are wear items replaced at every seal change."
+      ]
+    },
+    {
+      "id": "intensifier-lp-seals-end-bells",
+      "title": "Hydraulic (low-pressure) seals, end bells, piston and plunger",
+      "source": "pump-manual pages 37-44; intensifier-manual pages 14-15 and 21-26; document procedure-lp-seal-replacement (pictures)",
+      "steps": [
+        "Symptoms: oil from the end bell weep hole or cylinder/end bell joint, oil leaking past the piston (low stroke rate), jammed piston or detached plunger. 2.5-3 hours for an experienced technician; the intensifier assembly fixture is mandatory.",
+        "Remove the intensifier from the cabinet: shift cables/pilot valve or proximity switches off (drain oil), oil supply and drain lines plugged, manifold cap screws out.",
+        "On the fixture: release the tie rod nuts evenly in a figure-eight (no torque wrench), tap the end bells free, remove the cylinder, drive out the piston with a soft mallet.",
+        "Replace in each end bell: oil seal (flared side visible), spacer, snap ring, backup ring (moulding marks towards the end bell) and o-ring to the outside of the backup ring.",
+        "Plungers: remove snap ring and retainer (blow air between plunger and retainer), replace T-seals/o-rings; install plungers into the piston biscuit with a turning motion. Hi-Load piston: energizer ring, Teflon cap ring (soften in 65-90 C water, resize 3 min in a ring compressor), nylon backups, bearing bands with staggered joints.",
+        "Assemble on the fixture with the end bells squared (fixture screws finger tight + 1/8-1/4 turn); torque tie rod nuts 27, 54, 81, 108, 135, 163 Nm in a figure-eight pattern.",
+        "Refit HP cylinders, end caps, proximity switches / shift cables (otherwise oil sprays out), manifold (34 Nm, frame 149 Nm)."
+      ]
+    },
+    {
+      "id": "bleed-down-valve-service",
+      "title": "Bleed-down valve rebuild",
+      "source": "pump-manual pages 45-47",
+      "parts": {"302008-1": "hydraulic auto bleed-down repair kit", "100130-1": "piston", "400043-114 / 400047-114": "piston o-ring / backup ring", "100082-1": "HP seal", "400043-008": "seal o-ring", "100085-1": "seal cone", "100081-1": "bushing", "100133-1": "HP valve body", "100134-1": "adapter", "100087-1": "catcher body", "400083-1": "carbide disc", "400033-1": "oil seal 0.125 shaft"},
+      "steps": [
+        "Shut down, main disconnect OFF, bleed all HP lines; remove the hydraulic hose, the drain tubing gland nut and the HP port gland nut/collar.",
+        "Separate the actuator body from the HP valve assembly; remove the collar and the adapter; discard the HP seat and the HP seal assembly (push out with the HP valve tool through the oil seal - do NOT remove the oil seal).",
+        "Push the piston insert and piston out through the oil port with a soft 1/4 in dowel; replace the piston o-ring and backup ring (Parker Super O-Lube).",
+        "Food grade grease on stem, seal, hoop, o-ring, bushing; install the bushing then the seal assembly with the installation tool past the HP port hole; insert the stem with a plastic/wood dowel until it bottoms.",
+        "Install the HP seat, adapter (48 Nm), collar; join the HP valve assembly to the actuator; refit in the machine, gland nut 48 Nm, drain tube gland, hydraulic hose; run and check for leaks."
+      ]
+    },
+    {
+      "id": "onoff-valve-repair-kit",
+      "title": "Cutting head ON/OFF valve repair kit 302001-1 (HP air actuator valve)",
+      "source": "document onoff-valve-repair (3 pages with figures 1-9)",
+      "parts": {"100048-1": "valve body hi-performance (100048-2 legacy threaded)", "301008-1": "valve retainer insert (reused)", "100059-1": "poppet landing (seat)", "400043-014": "retaining o-ring (not a seal)", "100060-1": "poppet", "100061-1": "poppet seal", "400042-006": "red seal o-ring", "100062-1": "seal buttress", "100104-1": "seal ejection tool", "400034-2": "food grade lube", "400001-1": "Blue Goop"},
+      "steps": [
+        "Shut down, lock out, bleed; remove the orifice assembly, then the whole valve/nozzle body assembly (slide out of the robotic mounting collar if fitted).",
+        "Unscrew nozzle body and air actuator from the valve body 100048-1; hook out the o-ring 400043-014 and the poppet landing 100059-1 (tap or use a paperclip); remove the retainer insert 301008-1 from the other end (keep it).",
+        "Push the poppet and seal out with the ejection tool 100104-1 against the poppet tip; clean and inspect the body bore for scratches/pitting.",
+        "Food grade lube on the red o-ring 400042-006 -> onto the seal 100061-1 groove; lube the poppet shaft; slide the seal half way with the o-ring towards the tip; buttress 100062-1 with chamfer away from the tip, centred.",
+        "Insert poppet assembly from the actuator end, tip first, without force; press the retainer insert fully in from the top in one smooth motion.",
+        "Blue Goop on the poppet landing, insert in the outlet end, retain with the o-ring; Blue Goop on nozzle body threads, torque 47-54 Nm.",
+        "Blue Goop on the body top threads, screw into the air actuator until slight contact; apply 60 psi air (normally-closed actuator) to retract the poppet, then torque 47-54 Nm; release air.",
+        "Refit in the collar aligning the coned insert with the seat, refit the orifice assembly and the air line; raise pressure slowly and check for leaks."
+      ]
+    },
+    {
+      "id": "firing-pin-and-shift-sensor",
+      "title": "Intensifier firing pin, actuator and proximity (shift) sensor",
+      "source": "note-firing-pin, intensifier-manual pages 27-31 and 34-36, parts catalogue",
+      "facts": [
+        "Firing pin length min 29.2 mm (1.150 in), shaft OD approx. 2.08 mm (0.082 in), no measurable bend. Silver pin 100051-2 = electronic shift; brass pin 100051-1 = mechanical shift. Never mix.",
+        "Actuator with magnet (electronic shift sensor assembly 301011-3): length 56.64-56.89 mm; springs 400114-1 (small) and 400115-1 (large) only for electronic shift.",
+        "Mechanical shift: inner spring min 41.3 mm, outer spring min 50.8 mm, actuating plunger approx. 69.9 mm; shift cables are matched sets left/right.",
+        "Electric shift sequence: piston -> shift pin -> magnetic actuator -> proximity switch -> PLC -> solenoid on pilot valve -> pilot spool -> directional shift valve spool -> main oil flow reverses.",
+        "Failed proximity switch: LEDs do not change state or flash continuously -> replace (16-18 Nm). Pilot valve spool must move 3 mm freely; solenoid plunger 6 mm; 24 V test across front/rear contacts.",
+        "Remove the pin with the firing pin tool (o-ring suction); refit with the tool and a small Allen key, head towards the o-ring."
+      ]
+    },
+    {
+      "id": "portal-alignment",
+      "title": "Aligning a crossed (twisted) gantry portal",
+      "source": "document procedure-portal-alignment (5 pictures) and photo DSC_0004 (6 screws of the Y-side mounting plate)",
+      "steps": [
+        "Check for tension first: reference the machine, fix a magnetic base with a dial gauge on both sides of the table (Y1 and Y2 side), switch the motors off - a movement on the gauges means the portal is crossed (without gauges: a finger on the carriages feels a jerk when the drives are disabled).",
+        "Remove the covers of both Y carriages.",
+        "Loosen all VERTICAL screws on both sides Y1 and Y2 (6 screws per side on the mounting plate, about 1.5-2 turns). Do NOT loosen the horizontal screws. Slightly tighten the one screw on each side marked with the blue arrow (on the side opposite to where the Z axis is mounted).",
+        "Reference (home) the machine twice.",
+        "With the machine referenced, tighten all screws again; refit the covers."
+      ]
+    },
+    {
+      "id": "cnc-pc-maintenance",
+      "title": "Cnc886 control PC (Windows 10 IoT) - making changes survive the write filter",
+      "source": "document windows-iot-guide",
+      "facts": [
+        "Accounts: admin (default password 'admin', customer), operator (no password), servicing (manufacturer, do not change).",
+        "C: is protected by the Unified Write Filter (UWF); D: holds config (D:\\config), CNC programs (D:\\cncfiles, shared) and user data; Cnc886 lives in C:\\Cnc886.",
+        "To keep a change in C:\\Cnc886: stop Cnc886, change files/.knf, run C:\\Program Files\\Tools\\commit_cnc886.ps1 as admin, reboot, verify.",
+        "System changes (network IP etc.): run uwf-disable.ps1 (reboots), change, reboot, run uwf-enable.ps1 (reboots).",
+        "Boot menu: always 'Windows 10 - RTX' (default after 5 s). Power off: Cnc886 to Blocked, exit Cnc886, main switch off. Restart the PC periodically (UWF uses RAM).",
+        "Backup: whole C:\\Cnc886 folder regularly; full image with CloneZilla or DISM."
+      ]
+    },
+    {
+      "id": "adding-io-or-hardware",
+      "title": "Guidance for adding sensors, actuators or I/O to the cutting table",
+      "source": "derived from plc_io.json, axes.json and the schematics",
+      "facts": [
+        "24 V DC control power comes from U2 (10 A) through fused terminals XT3 (FU1-FU11); pick the fuse matching the function (inputs FU5-FU8, non-disconnecting outputs FU3, disconnecting outputs FU4) and respect the potential numbering (1xx inputs, 2xx/3xx/5xx I/O).",
+        "Spare digital I/O: PLC A2 points used only by uninstalled options (DI 1.5, DI 1.6, DO 1.3, DO 1.5, DO 1.6), A5 DI 4.7 (if option 50 fitted), free slots on the A3 CAIO-12 carrier for EBI-12 / EBO-10 / EAII-12 plug-ins, or an additional Elsaco PROMOS line2 module on CAN 2 (new address, bus termination).",
+        "Any new I/O must be configured in the Cnc886 PLC program on the IPC (AREM PRO) - commit the configuration with commit_cnc886.ps1 (see cnc-pc-maintenance).",
+        "Field devices on the trolleys connect through the M12 passive distributors XC10/XC11 (X), XC30 (Y1), XC40 (Y2) and the plug-in terminal strips XT50/XT50.1 (Z) with 1.5 m M12 cables SAIL-M12G-5-1.5U; use shielded highly flexible drag-chain cable for anything in the energy chain.",
+        "Safety-relevant additions (guards, E-stops) must go into the XPS-AC5121 / XPS-AFL5130 chain, not into the PLC alone (CSN EN 60204-1 art. 10.7, EN 418).",
+        "Pump interface: five status outputs and four command inputs are available on XT7 (sheet 42) plus RS485; the pump PLC also has prepared inputs S7 (pressure comparator) and S12 (HP sensor P4, 0-20 mA).",
+        "Drive side: each SERVOSTAR has spare DOUT1/DOUT2 outputs and the analogue monitor outputs (ANOUT1/2) on X3; 'Height control' already uses the CAIO analogue input with a 0-20 mA sensor - the same pattern works for e.g. a water level or pressure transducer."
+      ]
+    }
+  ]
+}

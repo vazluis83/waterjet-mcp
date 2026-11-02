@@ -1,0 +1,65 @@
+{
+  "model": "PTV JETS 3.8/60-COMPACT high-pressure pump (manual M-01/2007-EN, file name notes: old version with double-groove piston and mechanical-shift intensifier)",
+  "technical_parameters_60K": {
+    "max_output_pressure_bar": 4100, "max_cutting_water_l_min": 3.8, "intensifiers": "1 or 2 x 60K (this machine: 1)",
+    "inlet_water_pressure_bar": "3.5 - 6", "inlet_water_pH": "6 - 8", "water_filtration": "1 um and 0.5 um cascade",
+    "max_total_input_kW": 39.3, "main_motor": "37 kW, 3x400/230 V, 50 Hz, 1500 rpm", "cooler_motor": "1.5 kW, 3x400/230 V, 900 rpm",
+    "hydraulic_oil_fill_l": "160 (170 for a change), tank net volume 210 l", "oil_types": ["OHHM 46", "SHELL TELLUS 46", "Chevron hydraulic AW-46", "Exxon Nuto H-46", "Texaco Rando HD-46"],
+    "oil_pump": "PARKER PV063, 63.0 cm3/rev, proportional valve controlled", "max_oil_temperature_C": 52, "max_oil_pressure_bar": 215, "max_bleed_down_valve_temperature_C": 50,
+    "water_in_out": "G3/4 external thread (3/4 hose)", "hp_output": "UNF 3/4-16 internal thread",
+    "ambient": "+5 (15 after start-up) to +35 C, 85 % RH max; machine room +10 to +30 C recommended", "dimensions_mm": "1690 W x 1350 D x 1550 H", "dry_weight_kg": 1800,
+    "floor_load_kg_m2": 9000, "clearances_mm": "550 left (cooler air), 400 rear, 1100 right and front", "noise": "88.7 dB(A) in machine room, 80.1 dB(A) operator exposure per 8 h shift"
+  },
+  "technical_parameters_40K": {"max_output_pressure_bar": 4100, "max_cutting_water_l_min": 6.2, "note": "same frame; 40K intensifier gives more flow at lower pressure rating"},
+  "electrical_installation": {
+    "supply_cable": "CYKY 4x25 or 5x25 mm2 up to 15 m (protection 100 A), CYKY 4x35 / 5x35 mm2 if longer (protection 125 A)",
+    "internal_fuses": "P1 knife fuses 80 A, Q1 main switch 100 A", "pe_conductor": "CYA 16 mm2 yellow-green to the main distributor",
+    "service_sockets_in_room": "3x400/230 V 25 A and 230 V 25 A", "supply_height": "2500 mm above the machine-room floor, next to the distributor",
+    "main_distributor_elements": {
+      "Q1": "main switch 100 A", "P1": "knife fuses 80 A", "K1, K2, K3": "power contactors 60 A star/delta start of M1", "F1": "motor current protection M1 (approx. 43 A)",
+      "M1": "main motor 37 kW 3x400 V", "M2": "oil cooler fan/pump motor 1.5 kW 3x400 V (F3 6 A, contactor K4)", "M3": "inlet water booster pump 0.75 kW 1x230 V (F6 6 A, relay R2) - option 'TVV'",
+      "F2": "16 A breaker, reserve 3-phase feed (X2 'AREMPRO')", "F4": "10 A control distributor supply", "F5": "10 A socket Z 230 V", "F7": "primary breaker of isolating transformer TR1", "F8": "secondary breaker TR1",
+      "TR1": "isolating transformer power/control", "K7": "time relay star/delta", "R1": "relay switching K1-K3", "X0": "supply terminals", "X1": "main motor terminals", "X2": "other motors and control terminals", "X3": "control terminals"
+    },
+    "control_distributor_elements": {
+      "TR2": "feeding transformer control panel and distributor", "F10": "control fuse", "U1": "automatic control PLC (basic unit + RS485 module + temperature + analogue modules)", "U3": "proportional valve electronics",
+      "S0, S1": "hydraulic piston position sensors (electric-shift intensifier only)", "S5": "low oil level switch L1", "S6": "reverse filter clogged pressure switch P3", "S7": "prepared (pressure comparator)",
+      "O1, O2": "solid-state relays for electric shift", "V1, V2": "slide valve coils (electric shift)", "V3": "DEV - bleed-down valve pilot distributor", "V4": "EVV - inlet water solenoid valve", "V5": "EV - hydraulic delivery closing valve", "V6": "PPV - proportional valve",
+      "S10": "P2 inlet water pressure sensor", "S11": "P1 hydraulic oil pressure sensor", "S12": "P4 HP water sensor (option)", "S21, S22": "T3, T4 check valve temperature sensors", "S23": "T1 oil temperature sensor", "S24": "T5 bleed-down valve temperature sensor",
+      "TB1-TB5": "automatic control terminals", "X4, X5, X6": "standard terminals"
+    },
+    "control_panel": {"U4": "control panel with display", "H1": "green pilot lamp machine in operation", "S3": "START", "S2": "STOP", "S1": "mushroom TOTAL STOP"}
+  },
+  "hydraulic_scheme_PTV-011-D-0173_positions": {
+    "1 M1": "main electromotor", "2 D": "pump holder", "3 S": "coupling", "4 P": "hydraulic pump", "5 HK1": "hydraulic distribution block 1", "6 DEV": "electromagnetic distributor (bleed down)", "7 DZV": "check valve panel", "8 DSV": "choke valve panel", "9 PV": "safety valve",
+    "10 P1": "oil pressure sensor", "11 Z": "plug (service measuring)", "12 T2+L2": "local thermometer and level indicator", "13 NZ": "filler", "14 PF": "filter clogging pressure switch", "15 ZF": "return filter 10 um", "16 T1": "oil temperature sensor", "17 L1": "oil level switch", "18 PN": "tank openings", "19 N": "oil tank",
+    "20 KV1 / 21 KV2": "ball valves (cooler circuit / tank drain)", "22 SO1": "suction slide valve", "23 SF": "suction filter", "24 CH": "oil cooler with M2", "25 VTM": "intensifier (multiplier)", "26 T3/T4": "check valve temperature sensors", "27 BD": "bleed down valve", "28 T5": "bleed down valve temperature", "29 P4": "HP water pressure sensor (option)",
+    "30 FJ": "filtering unit", "31 V/KV3": "ball valves", "32 MP1": "manometers in/out", "33 FV1": "1 um filter", "34 FV0.5": "0.5 um filter", "35 P2": "inlet water pressure sensor", "36 TVV": "inlet pressure booster unit (option)", "37 PV": "booster pump", "38 M3": "booster motor", "39 P3": "booster pressure switch (on 3.7 bar / off 4.5 bar)", "40 TN": "pressure tank with bladder (1.2 bar air)", "41 TV": "air valve", "42 HK2": "hydraulic block 2", "43 SV": "choke valve (manometer)", "44 MP2": "oil manometer", "45 EV": "delivery closing solenoid valve", "46 PPV": "proportional valve", "47 EVV": "inlet water solenoid valve", "48 VTV": "HP equalizing (attenuator) cylinder"
+  },
+  "display_abbreviations": {"RUN": "in operation", "FAULT": "fault, start not allowed", "STOP": "out of operation", "CHECKING": "inlet water pressure test", "STARTING": "motor start", "CHANGING": "pressure level change in progress", "STOPPING": "depressurising", "Mth": "machine hours", "PHO": "hydraulic oil pressure", "THO": "oil temperature", "PW": "inlet water pressure", "TCHVR/TCHVL": "check valve temperature right/left", "TBD": "bleed down valve temperature", "HPW": "output HP water pressure (calculated from oil pressure if no P4 sensor)", "P9": "preset level indication", "H": "LO/HI quick-switch indication"},
+  "password_levels": {
+    "none": "date/time, HI/LO quick-switch presets",
+    "A": "service: reset Mth counters for check valve lapping and oil/filter change; 'Switch delay' timer; 'Default' restore. The 4-digit level-A password is kept locally by AMC (file 'Pump Password.txt', not published).",
+    "B": "all Settings (BD timer, change timers, presets, linearization, constant mult.) - producer service engineers",
+    "C": "program changes - producer only",
+    "menu_path_for_password": "Right arrow -> MAIN MENU -> down to PASSWORD -> right arrow -> MODE -> type 4 digits -> ENTER (level shown bottom-left for 5 minutes) -> ESC"
+  },
+  "service_intervals": {
+    "check_valves_lapping_Mth": 500, "oil_and_return_filter_change_Mth": "first 500, then every 2000", "suction_filter_clean": "every oil change", "suction_filter_replace_Mth": 4000, "cooler_fins_clean_Mth": 2000,
+    "water_filter_cartridges": "replace when differential > 1.2 bar running, at least once a year", "hp_piping_joints_check": "every 3 months", "inline_filter_screen": "every 6 months (parts list)", "first_160_Mth": "check tightness of all connections frequently",
+    "bladder_tank_air_pressure_bar": 1.2, "counter_reset": "MAIN MENU -> SERVICING -> 'Servis CHV done?' / 'Servis oil done?' with level-A password (see procedure documents)"
+  },
+  "alarm_thresholds": {
+    "warnings": ["oil temperature > 55 C", "intensifier > 110 cycles/min for > 10 min (electric shift)", "intensifier < 10 cycles/min for > 20 min (electric shift)", "check valve service due (500 Mth)", "bleed down valve temperature >= 40 C", "return filter ZF clogged", "left/right check valve temperature >= 40 C", "oil + filter service due"],
+    "faults_stop_or_block_start": ["oil level below critical", "oil temperature > 60 C", "inlet water pressure < 3.0 bar", "intensifier > 110 cycles/min for > 10 min", "motor thermal protection", "intensifier < 10 cycles/min for > 20 min", "oil temperature < 10 C"],
+    "cooler_control": "fan on at 50 C, off at 45 C (T1 on tank); operating oil temperature 45-50 C",
+    "normal_oil_pressure": "approx. 215 bar cold with ON/OFF valve closed, 205-212 bar warm, 180-210 bar while cutting; manometer MP2 swing 170-210 bar"
+  },
+  "torques": {
+    "hp_gland_nut_1_4": "20-34 Nm (15-25 ft-lb)", "hp_gland_nut_3_8": "47-60 Nm (35-45 ft-lb)", "hp_gland_nut_9_16": "80-100 Nm (60-75 ft-lb)",
+    "intensifier_end_cap": "hand tight with spanner + light mallet taps, max 75 Nm (pump manual) / 115 Nm with H2O Jet torque tool (intensifier manual)", "check_valve_outlet_body": "67 Nm (50 ft-lb)", "inlet_poppet_retainer_screw": "4.5-7 Nm with Loctite 242",
+    "tie_rod_nuts": "stepwise 27, 54, 81, 108, 135, 163 Nm in figure-eight pattern on the assembly fixture (pump manual: 27 Nm seat only)", "pilot_valve_screws": "5.7 Nm", "shift_valve_vickers": "10 Nm all, then outer 34 Nm", "shift_valve_rexroth": "15.5 Nm inner, 75 Nm outer", "manifold_to_intensifier": "34 Nm", "manifold_to_frame": "149 Nm", "proximity_switch_bolts": "16-18 Nm",
+    "bleed_down_adapter_and_gland": "48 Nm (35 ft-lb)", "onoff_valve_nozzle_body_and_actuator": "47-54 Nm (35-40 ft-lb), actuator with 60 psi air applied"
+  },
+  "lubricants": {"400001-1": "Blue anti-galling lubricant (Blue Goop) - all HP threads and stainless-on-stainless contact", "400034-2": "Food grade lubricant - all HP seals and o-rings", "400015-1": "Parker Super O-Lube - o-rings on hydraulic parts"}
+}

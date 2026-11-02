@@ -1,0 +1,30 @@
+{
+ "id": "onoff-valve-repair",
+ "title": "ON/OFF valve repair kit HP (302001-1) installation procedure",
+ "kind": "procedure",
+ "language": "en",
+ "vendor": "Performance Waterjet / H2O Jet",
+ "source_file": "HP Rebuild Installation PWJ onoff.pdf",
+ "pages": [
+  {
+   "page": 1,
+   "text": "ON/OFF VALVE REPAIR KIT, HP \n \nPerformance Waterjet • www.performancewaterjet.com.au • Ph. 1300 722 559 F. 1300 733 635 \n \n1\nFigure 2 \nFigure 3 \nON/OFF VALVE REPAIR KIT, HP (302001-1) \nThis service procedure is for the installation of the ON/OFF Valve Repair Kit for a High Performance Air \nActuator. \nDisassembly: \n1. Shut down the system. \n \nPlace the main electrical disconnect in the OFF position and bleed down all high-pressure \nlines. Place an “Out of Service” tag on the main electrical disconnect and lock it out.  \nFailure to do so may result in damage to equipment or injury to personnel. \n \n2. Remove the orifice assembly from the Nozzle Body. \n \n3. Remove the entire ON/OFF Valve/Nozzle Body Assembly from \nthe system. If installed with a robotic mounting collar, leave \nthe collar in place and slide valve assembly out of the collar.  \n \n4. Remove the Nozzle Body from the Valve Body (100048-1). \n \n5. Remove the On/Off Valve Actuator from the Valve Body. \n \n6. Remove the O-Ring (400043-014) from the outlet end of the \nValve Body using a small straightened paperclip or similar \ntool. See Figure 1.  \na. NOTE – this o-ring is not a sealing o-ring. It is only \nused to prevent the poppet seat from falling out \nduring removal of the nozzle body. \n \n7. Remove the Poppet Landing (100059-1) from the Valve Body. If \ntapping the body does not cause the seat to fall out, insert a \nstraightened paperclip in the hole in the seat and gently loosen.  \nDiscard the Landing and O-Ring.  See Figure 2. \n \n8. Remove the Valve Retainer Insert (301008-1) from the opposite end \nof the valve body. DO NOT DISCARD. See Figure 3.  \n \n \n \nFigure 1",
+   "images": 6,
+   "rotated": 0
+  },
+  {
+   "page": 2,
+   "text": "ON/OFF VALVE REPAIR KIT, HP \n \nPerformance Waterjet • www.performancewaterjet.com.au • Ph. 1300 722 559 F. 1300 733 635 \n \n2\nFigure 5 \nFigure 4 \n \n9. Place the Seal Ejection Tool (100104-1) against the \nPoppet tip and push out the Poppet and Seal \nassembly. Discard the Poppet and Seal assembly. \nSee Figure 4. \n \n10. Thoroughly clean any foreign material from the \ninside and outside of the Valve Body (100048-1). \nInspect Valve Body inside diameter for scratches or \npitting and replace if necessary.  \n \n \nAssembly: \n11. Apply a light coat of Food Grade Lube (400034-2) \nto the red Seal O-Ring (400042-006) and slide over \nthe Poppet Seal (100061-1) groove.  See Figure 5 \n \n12. Apply a light coat of Food Grade Lube to the shaft \nof the Poppet (100060-1). See Figure 5 \n \n13. Slide Poppet Seal (with O-Ring installed) half way \ndown the shaft of the Poppet with the Seal O-Ring                                                                   \nfacing tip of Poppet. See Figure 5 \n \n14. Slide the Seal Buttress (100062-1) on the poppet \nshaft with the chamfer facing away from the \nPoppet tip. The seal assembly and buttress should \nbe centered as much as possible on the stem. See \nFigure 6 \n \n15. Insert the Poppet and Seal Assembly into the actuator end of the \nValve Body, pointed tip first. See Figure 7 \na. NOTE – Do not force the Poppet and Seal Assembly into the \nValve Body. O-Ring damage will occur and cause premature \nvalve failure.  \n \n \n \n \n \n \n \n \nFigure 6 \nFigure 7",
+   "images": 6,
+   "rotated": 0
+  },
+  {
+   "page": 3,
+   "text": "ON/OFF VALVE REPAIR KIT, HP \n \nPerformance Waterjet • www.performancewaterjet.com.au • Ph. 1300 722 559 F. 1300 733 635 \n \n3\nFigure 8\n \n \n \n16. Gently slide the Valve Retainer Insert (301008-1) into the top of the \nValve Body. In one smooth motion, press the Insert fully into the Valve \nBody until it bottoms out. See Figure 8. \n \n17. Apply a thin coat of Blue Goop (400001-1) to the Poppet Landing and \ninsert in the outlet end of the Valve Body. Push the O-Ring (400043-\n014) into the groove to hold the Poppet Landing in place. See Figure \n9. \n \n18. Apply Blue Goop to the threads of the Nozzle Body and screw into \nValve Body outlet. Torque to 35-40 ft-lbs (47-54 N-m). \n \n19. Apply Blue Goop to the threads on top of the Valve Body. Thread \nValve Body into Air Actuator until slight contact is made. DO NOT                                         \nWRENCH TIGHTEN AT THIS TIME. \n \n20. Apply 60psi (mill air) to Air Actuator Assembly (Normally Closed Actuator \nOnly) to retract the Poppet. Torque to 35-40 ft-lbs (47-54 N-m). Release \nair pressure. \na. NOTE – Failure to apply air pressure while tightening will result \nin premature failure of the Poppet.  \n \n21. Insert Valve Assembly into the mounting collar on system. Align the \nconed insert with the seat of the Valve body by carefully moving the \nvalve assembly up and down slightly. You should feel the coned insert \nalign with the seat.  \n \n22. Apply Blue Goop to the outlet threads of the Nozzle Body. \n \n23. Re-install the orifice assembly. \n \n24. Attach the pneumatic control line (air line) to the Air Actuator.  \n \n25. Turn on the high-pressure source and slowly raise the pressure, checking \nfor leaks. Make sure the valve is operating properly.  \nFigure 9",
+   "images": 4,
+   "rotated": 0
+  }
+ ],
+ "format": "pdf",
+ "has_page_images": true
+}

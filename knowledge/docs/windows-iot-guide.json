@@ -1,0 +1,49 @@
+{
+ "id": "windows-iot-guide",
+ "title": "Servicing manual for CNC PCs with Windows 10 IoT Enterprise (Cnc886 control PC)",
+ "kind": "manual",
+ "language": "en",
+ "vendor": "AREM PRO (Cnc886)",
+ "year": 2024,
+ "source_file": "Windows 10 IoT User Guide EN.pdf",
+ "pages": [
+  {
+   "page": 1,
+   "text": "Windows 10 IoT Enterprise\nservicing manual\nServicing manual for PCs with Windows 10 IoT \nEnterprise\nPreamble\nWindows 10 IoT Enterprise is specialized edition of Windows 10 aimed at deployment in industry. \nMost prominent feature is long-term security support without function updates. This provides stable\nenvironment for CNC control system,\nSystem storage (solid-state drive) is separated to two partitions C: and D:. Partition C:  is for system\nand applications, partition D: is for user data. Partition C: can protected against changes with \nUniversal Write Filter1 (UWF). As such, it is necessary to follow instructions in order to make \nchanges that would otherwise be removed on reset by UWF.\nConfiguration Details\nUser accounts\nSystem contains following predefined user accounts:\n•\nadmin (Machine Administrator)\n◦default password admin\n◦system administrator account controlled by customer\n•\noperator (Machine Operator)\n◦no password\n◦limited user for machine operation\n•\nservicing (Service Support)\n◦password set by manufactured, must not be changed\n◦system administrator account for manufacturer\nSoftware preinstalled by vendor\n•\nIntervalZero RTX – Windows real-time extension, required for Cnc886\n•\n7-Zip – archive manager\n•\nNotepad++ – advanced text editor\n1\nMore information available at https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/unified-\nwrite-filter",
+   "images": 4,
+   "rotated": 0
+  },
+  {
+   "page": 2,
+   "text": "•\nImageGlass – simple image viewer\n•\nSumatraPDF – simple PDF viewer\n•\nTeamViewer – remote support tool\nSource code for open source programs is included in the installation in C:\\Install.\nAdditional software\nAny additional software must be approved by machine vendor prior installation. No warranty for \ncompatibility is provided without previous testing.\nSupport scripts\nFolder C:\\Program Files\\Tools contains number of scripts for system maintenance.\n•\ncommit_cnc886.ps1(cmd)– save changed files in C:\\Cnc886 folder when UWF is enabled.\n•\nset_network_private.ps1 – Switches network profile to Private tin order to enable file \nsharing services.\n•\nupdates_install(_restart).ps1 – Search and install all Windows updates (and automatically \nreboot computer).\n•\nupdates_cleanup(_restart).ps1 – Remove unnecessary files left by Windows Update (and \nautomatically reboot computer).\n•\nuwf-disable.ps1(cmd) – Disable Universal Write Filter.\n•\nuwf-enable.ps1(cmd) – Enable Universal Write Filter.\nFurther configuration details\n•\nWindows Updates are controlled by customer IT management.\n•\nWindows Defender files are relocated to hidden folder D:\\WinDefend in order to keep these \nfiles writable even with UWF enabled.\n•\nRemote Desktop is enabled for administrator accounts.\n•\nDuring system start-up prompt appears enabling to choose between “Windows 10 – RTX” or\n„Windows 10“. For regular operation “Windows 10 – RTX” must be selected. This option is \ndefault and will be automatically selected after 5 seconds.\nDetails regarding the control application Cnc886\n•\nProgram files and most of the configuration files are stored in C:\\Cnc886.\n•\nAdditional configuration files are stored in D:\\config.\n•\nCNC programs are stored in D:\\cncfiles.\n◦This folder is by default shared with read/write access for Everyone.\n•\nOther user data are stored on drive D:.",
+   "images": 4,
+   "rotated": 0
+  },
+  {
+   "page": 3,
+   "text": "Basic computer operation\n•\nPower on: computer is configured to power on automatically as soon as machine is powered \nup.\n•\nPower off: Switch Cnc886 to Blocked state, terminate Cnc886, shut down main power \nswitch (optionally you may first shut down Windows via Start>Power Icon>Shutdown)\n•\nReboot: Switch Cnc886 to Blocked state, terminate Cnc886,  reboot Windows via \nStart>Power Icon>Restart\nHow to make changes – standard procedures with UWF \nenabled\nMaking changes requires administrative privileges. Either the system requests them automatically \nor you must run given command as an administrator. If you are logged in as Operator, you will be \nprompted with dialog offering to log in as admin or servicing user. If you are already logged in as \nadministrative account, you will be prompted with confirmation dialog.\nMaking changes in Cnc886 folder\nFollowing steps are necessary to preserve changed files in folder C:\\Cnc886. Files on drive D: are \nalways preserved.\n1. Terminate Cnc886 application\n2. Perform needed changes (replace files, modify .knf files, …)\n3. Run script C:\\Program Files\\Tools\\commit_cnc886.ps1 (right click > Run with \nPowerShell).\n4. Script will request administrative privileges. \n5. Reboot the system once the script is finished.\n6. Verify that changes are preserved.\nChanging system configuration\nFollowing steps are necessary to change Windows configuration (e. g. network settings, user profile\nmodifications, …)\n1. Disable UWF.\n•\nRun script C:\\Program Files\\Tools\\uwf_disable.ps1 (right click > Run with \nPowerShell).\n•\nSystem will reboot.\n2. After reboot, the UWF filter is disabled and all changes from this point forward will be \nsaved to disk.\n3. Perform all required changes.\n4. Reboot computer.",
+   "images": 4,
+   "rotated": 0
+  },
+  {
+   "page": 4,
+   "text": "5. Enable UWF.\n•\nRun script C:\\Program Files\\Tools\\uwf_enable.ps1 (right click > Run with \nPowerShell).\n•\nSystem will reboot.\n6. After reboot, the UWF filter is enabled and any changes will be discarded on reboot.\nUpdating Windows\nNote: Windows Update require Internet connection. Update process can take a long time during \nwhich the machine should not be used.\nBefore installing updates, check with machine vendor if updates have been tested for compatibility \nissues.\n1. Disable UWF.\n•\nRun script C:\\Program Files\\Tools\\uwf_disable.ps1 (right click > Run with \nPowerShell).\n•\nPress ENTER to reboot system.\n2. After reboot, the UWF filter is disabled and all changes from this point forward will be \nsaved to disk.\n3. Run script C:\\Program Files\\Tools\\updates_install(_restart).ps1 (right click > Run with \nPowerShell).\n4. Once finished, reboot system and wait for updates to finish.\n5. Repeat steps 3 and 4 as long as new updates show up. Repeat these steps at least twice.\n6. Run script C:\\Program Files\\Tools\\updates_cleanup(_restart).ps1 (right click > Run with \nPowerShell).\n7. Once finished, reboot system..\n8. Enable UWF.\n•\nRun script C:\\Program Files\\Tools\\uwf_enable.ps1 (right click > Run with \nPowerShell).\n•\nPress ENTER to reboot system.\n9. After reboot, the UWF filter is enabled and any changes will be discarded on reboot.\nConfiguring network address\nConfiguration of network requires disabled UWF, see chapter “Changing system configuration“.\n1. Open Network and Sharing Center by right-click on network icon.",
+   "images": 4,
+   "rotated": 0
+  },
+  {
+   "page": 5,
+   "text": "2. Open “Change adapter settings”\n3. Open Properties of chosen adapter. Administrator login is required.\n4. IP address can be changed under Internet Protocol Version 4 (TCP/IPv4)\n5. Confirm all changes, reboot computer to verify it, and re-enable UWF.\nBackup\n•\nCritical files are Cnc886 configuration files. We recommend periodical backup of whole C:\\\nCnc886 folder.",
+   "images": 4,
+   "rotated": 0
+  },
+  {
+   "page": 6,
+   "text": "•\nBackup regime for CNC files (stored in D:\\cncfiles) is up to customer requirements.\n•\nAdditional data on D: drive (with the exception of D:\\WinDefend folder) shall be backed up \nas necessary.\n•\nComplete system backup can be performed by any available disk cloning tool. Tested tools \ninclude CloneZilla, Windows DISM disk capture using Windows PE.\nRecommendations\n•\nRestart computer periodically. Do not leave the system running for long periods. UWF \nconsumes RAM and long periods of operation can consume all available RAM rendering the\nsystem unstable or unusable.\nKnown issues\n•\nDuring boot, system keeps performing disk check on drive C:.\n◦Skip disk check by pressing key when prompted.\n◦Disable UWF and restart system.\n◦Let the disk check run to completion.\n◦Re-enable UWF and continue using the system.",
+   "images": 4,
+   "rotated": 0
+  }
+ ],
+ "format": "pdf",
+ "has_page_images": true
+}

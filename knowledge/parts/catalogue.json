@@ -1,0 +1,546 @@
+{
+ "source": "Catalogue most of the used parts.xls",
+ "title": "Price list of the most requested and used parts",
+ "items": [
+  {
+   "name": "High Pressure Cylinder 60k",
+   "order_no": "100001-1",
+   "note": "This part can be used for left and right side of intensifier"
+  },
+  {
+   "name": "Check valve Main Body  60k",
+   "order_no": "100009-1",
+   "note": "This part can be used for left and right side of intensifier"
+  },
+  {
+   "name": "Check Valve Assembly 60k ( Two Piece Poppet",
+   "order_no": "301002-3",
+   "note": ""
+  },
+  {
+   "name": "Check Valve Assembly 60k",
+   "order_no": "301002-1",
+   "note": ""
+  },
+  {
+   "name": "Check Valve outlet Body H2O style",
+   "order_no": "100022-2",
+   "note": "Use together with  this repair kit:302003-2"
+  },
+  {
+   "name": "Check Valve Outlet Body",
+   "order_no": "100022-1",
+   "note": "Use together with  this repair kit:302003-1"
+  },
+  {
+   "name": "Check valve Repair Kit",
+   "order_no": "302003-2",
+   "note": "New type of repair kit must be used with outlet body :100022-2"
+  },
+  {
+   "name": "Check valve Repair Kit",
+   "order_no": "302003-1",
+   "note": "Old type of repair kit must be used with outlet body :100022-1"
+  },
+  {
+   "name": "HP  Seal Kit 60k",
+   "order_no": "302004-1",
+   "note": ""
+  },
+  {
+   "name": "HP  Seal Kit  JE  60k",
+   "order_no": "302004-1-J",
+   "note": ""
+  },
+  {
+   "name": "Body Hydraulic Auto Bleed Down  Valve",
+   "order_no": "100133-1",
+   "note": ""
+  },
+  {
+   "name": "Hydraulic Auto Bleed Down Repair Kit",
+   "order_no": "302008-1",
+   "note": "New type, replacing the old one:302008 - 1. Old one is on this picture."
+  },
+  {
+   "name": "Oil  Seal 125 Shaft Dia STT Bleed Down Valve",
+   "order_no": "400033-1",
+   "note": ""
+  },
+  {
+   "name": "Adapter Hydraulic  Auto Bleed Down",
+   "order_no": "100134-1",
+   "note": ""
+  },
+  {
+   "name": "Catcher Body , Bleed Down Valve",
+   "order_no": "100087-1",
+   "note": ""
+  },
+  {
+   "name": "Catcher Assembly SS Plug, Bleed Dovn Valve",
+   "order_no": "400081-6",
+   "note": ""
+  },
+  {
+   "name": "Carbide disc , Bleed Dow Valve",
+   "order_no": "400083-1",
+   "note": ""
+  },
+  {
+   "name": "ON OFF Valve Assembly",
+   "order_no": "301007-3-SSF",
+   "note": ""
+  },
+  {
+   "name": "ON OFF Valve Assembly",
+   "order_no": "301007-9",
+   "note": "On OFF Valve with Adjustable Nozzle Body"
+  },
+  {
+   "name": "On/Off Valve Body, Hi-Performance",
+   "order_no": "100048-1",
+   "note": ""
+  },
+  {
+   "name": "On/Off Valve Body, Legacy, Threaded",
+   "order_no": "100048-2",
+   "note": ""
+  },
+  {
+   "name": "ON OFF VALVE SEAL RETAINER INSERT ? LEGACY THEARDED",
+   "order_no": "100047-2",
+   "note": "Only for ON OFF valve  100048-2"
+  },
+  {
+   "name": "ON OFF Valve Seal Retainer  Insert High Performance",
+   "order_no": "301008-1",
+   "note": ""
+  },
+  {
+   "name": "ON OFF Valve Repair KIT",
+   "order_no": "302001-1",
+   "note": "Possible to use for both tybe of ON OFF valve body"
+  },
+  {
+   "name": "AirAcutator Hi-Performance N/C  Assembly",
+   "order_no": "301006-1",
+   "note": ""
+  },
+  {
+   "name": "Actuator Repair Kit  HI Performance N/C",
+   "order_no": "302017-1",
+   "note": "Repair kit  is for 301006-1"
+  },
+  {
+   "name": "Actuator Repair Kit  Legacy N/C",
+   "order_no": "302017-2",
+   "note": "Repair kit is for 301006-3"
+  },
+  {
+   "name": "Breath Vent , Air Actuator",
+   "order_no": "400066-1",
+   "note": ""
+  },
+  {
+   "name": "PIII Nozzle Body Hi Velocity",
+   "order_no": "100026-3",
+   "note": ""
+  },
+  {
+   "name": "Adjustable PIII Nozzle Body",
+   "order_no": "301099-1",
+   "note": ""
+  },
+  {
+   "name": "Nozzle Body 5 Axie Adjustable",
+   "order_no": "301099-2",
+   "note": "Nozzle body for Pj"
+  },
+  {
+   "name": "Gland Nut, Adjustable Nozzle Body, P-III",
+   "order_no": "100027-3",
+   "note": "Gland nut is for both type"
+  },
+  {
+   "name": "Collar, Adjustable Nozzle Body, P-III",
+   "order_no": "100027-2",
+   "note": "Collar  is for both type"
+  },
+  {
+   "name": "HP Collar Block",
+   "order_no": "100040-1",
+   "note": ""
+  },
+  {
+   "name": "HP Collar Round",
+   "order_no": "100040-2",
+   "note": ""
+  },
+  {
+   "name": "Electronic Shift Sensor Assembly",
+   "order_no": "3010011-3",
+   "note": "Must  be used only together with Firing pin electronic:100051-2"
+  },
+  {
+   "name": "Firing Pin Mechanical",
+   "order_no": "100051-1",
+   "note": "This Firing Pin can be use only for mechanical shift"
+  },
+  {
+   "name": "Firing Pin Electronic",
+   "order_no": "100051-2",
+   "note": "This Firing Pin must be used only for electronic shift"
+  },
+  {
+   "name": "Spring, Small Shift Sensor",
+   "order_no": "400114-1",
+   "note": "This spring must be used only for electronic shift"
+  },
+  {
+   "name": "Spring , Large Shif Sensor",
+   "order_no": "400115-1",
+   "note": "This spring must be used only for electronic shift"
+  },
+  {
+   "name": "Hydraulic Cylinder 60 k",
+   "order_no": "100008-1",
+   "note": "For  intensifier 40k and 60k"
+  },
+  {
+   "name": "Hydraulic Piston 60 k",
+   "order_no": "100010-1",
+   "note": "Recommend to change for new type :301023 - 1"
+  },
+  {
+   "name": "Hi - Load Piston Assembly  60k",
+   "order_no": "301023-1",
+   "note": "For this piston is : Hi- Load Piston Ring Kit 302013-1"
+  },
+  {
+   "name": "Hydraulic Seal Kit 60k",
+   "order_no": "302007-1",
+   "note": "For ceramic piston plunger"
+  },
+  {
+   "name": "Hydraulic Seal Kit HO 60k",
+   "order_no": "302005-1",
+   "note": "For staniless piston plunger"
+  },
+  {
+   "name": "Hydraulic Seal Kit Hi - Load",
+   "order_no": "302007-3",
+   "note": "Basic repair kit for Hi- Load"
+  },
+  {
+   "name": "Hi-Load Piston Ring  Kit",
+   "order_no": "302013-1",
+   "note": "For Hi- Load Piston"
+  },
+  {
+   "name": "Hydraulic Return Filter",
+   "order_no": "937956Q",
+   "note": "For pump Clasic and Basic with plastic filter housing"
+  },
+  {
+   "name": "Hydraulic Return Filter",
+   "order_no": "1262993",
+   "note": "For pump standart Jets 37 kW"
+  },
+  {
+   "name": "Hydraulic Return Filter",
+   "order_no": "FTCE2A100",
+   "note": "For pump Compact with aluminum filter housing"
+  },
+  {
+   "name": "Hydraulic Return Filter",
+   "order_no": "BT8841-MPG",
+   "note": "For pump Jets 2,2 kW without  filter housing"
+  },
+  {
+   "name": "Hydraulic Return Filter",
+   "order_no": "606210-6-F",
+   "note": "For pump Jets 2,2 kW with aluminum filter housing"
+  },
+  {
+   "name": "Hydraulic Plug for  Manifload Hydraulic",
+   "order_no": "400061-10",
+   "note": "Can be used for Maniflod Hydraulic  Side -Mount and Maniflod Hydraulic Top Mount"
+  },
+  {
+   "name": "Tie Rod",
+   "order_no": "100017-1",
+   "note": ""
+  },
+  {
+   "name": "Hex Nut (Grade 8)",
+   "order_no": "40000-1",
+   "note": ""
+  },
+  {
+   "name": "Ceramic Piston Plunger, 60K",
+   "order_no": "100013-1",
+   "note": ""
+  },
+  {
+   "name": "Collar HP 1/4\"",
+   "order_no": "60C4",
+   "note": ""
+  },
+  {
+   "name": "Collar HP 3/8\"",
+   "order_no": "60C6",
+   "note": ""
+  },
+  {
+   "name": "Collar HP 9/16",
+   "order_no": "60C9",
+   "note": ""
+  },
+  {
+   "name": "Gland Nut HP 1/4\"",
+   "order_no": "60G4",
+   "note": ""
+  },
+  {
+   "name": "Gland Nut HP 3/8\"",
+   "order_no": "60G6",
+   "note": ""
+  },
+  {
+   "name": "Gland Nut HP 9/16\"",
+   "order_no": "60G9",
+   "note": ""
+  },
+  {
+   "name": "Adapter 3/8\" M x 1/4\" F",
+   "order_no": "301026-3",
+   "note": ""
+  },
+  {
+   "name": "Short Stop Filter w/Adapter Assembly 1/4",
+   "order_no": "301026-1",
+   "note": ""
+  },
+  {
+   "name": "Short Stop Filter",
+   "order_no": "400096-1",
+   "note": ""
+  },
+  {
+   "name": "Plug HP 1/4",
+   "order_no": "400007-1",
+   "note": ""
+  },
+  {
+   "name": "Plug HP 3/8",
+   "order_no": "400007-2",
+   "note": ""
+  },
+  {
+   "name": "Inline Filtr FilterAssembly 1/4\"",
+   "order_no": "301010-1",
+   "note": "Inline filter screen must be checked every 1/2 year"
+  },
+  {
+   "name": "Inline Filtr Screen",
+   "order_no": "400052-2",
+   "note": ""
+  },
+  {
+   "name": "Parallel Swivel   1/4\"",
+   "order_no": "15184",
+   "note": ""
+  },
+  {
+   "name": "Parallel Swivel repair kit 1/4\"",
+   "order_no": "15177",
+   "note": "Speacer is not in repair kit and must be used old one"
+  },
+  {
+   "name": "Swivel Shaft 1/4\"",
+   "order_no": "15361",
+   "note": ""
+  },
+  {
+   "name": "Plug",
+   "order_no": "B-5731-1",
+   "note": ""
+  },
+  {
+   "name": "Screw",
+   "order_no": "A-0515-3",
+   "note": ""
+  },
+  {
+   "name": "HP Swivel 1/4\"",
+   "order_no": "15178",
+   "note": ""
+  },
+  {
+   "name": "Mixing Chamber Assembly PIII Dual Port",
+   "order_no": "301021-1",
+   "note": "PIII nozzle - orifice for this cutting head"
+  },
+  {
+   "name": "Mixing Chamber Assembly PIII single Port",
+   "order_no": "301021-2",
+   "note": "PIII nozzle - orifice for this cutting head"
+  },
+  {
+   "name": "PIII Collet",
+   "order_no": "100086-1",
+   "note": ""
+  },
+  {
+   "name": "The Integral Diamond Eductor - IDE Assembly",
+   "order_no": "301129-1-xx",
+   "note": "The Integral Diamond Eductor - IDE Assembly with new type of Suction Port Adapter."
+  },
+  {
+   "name": "The Integral Diamond Eductor - IDE Assembly (.281 I.D.) (Single Port)",
+   "order_no": "301129-1-xx",
+   "note": ""
+  },
+  {
+   "name": "Retaining Collet",
+   "order_no": "100171-281",
+   "note": "This colet is for both cutting head"
+  },
+  {
+   "name": "Clamp Nut",
+   "order_no": "100172-1",
+   "note": "Clamp Nut  is for both cutting head"
+  },
+  {
+   "name": "Integral Diamond Eductor, Clamp Nut",
+   "order_no": "PTV-012-V-4816  Slice",
+   "note": "New  type of cutting head with  adjustable Clamp nut"
+  },
+  {
+   "name": "Retaining Collet",
+   "order_no": "D-COL-11",
+   "note": ""
+  },
+  {
+   "name": "P-III Nozzle Nut",
+   "order_no": "100036-1",
+   "note": ""
+  },
+  {
+   "name": "P-II Nozzle Assembly - Orifice  Diamond",
+   "order_no": "201601-xx",
+   "note": ""
+  },
+  {
+   "name": "Standard Nozzle Assembly - Orifice Diamond",
+   "order_no": "201101-xx",
+   "note": ""
+  },
+  {
+   "name": "P-III Nozzle Assembly - Orifice ( saphire  or ruby)",
+   "order_no": "203501-xx",
+   "note": "For cutting head PIII"
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x1,27x76,2",
+   "order_no": "B-1555409 G 100 BOR",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x0,91x76,2",
+   "order_no": "B-1555412 G 100 BOR",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x0,5x50,8",
+   "order_no": "B-1555421 G 100 BOR",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x1,02x76,2",
+   "order_no": "B-1555422 G 100 BOR",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x0,76x76,2",
+   "order_no": "B-1555423 G 100 BOR",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x1,52x101,6",
+   "order_no": "B-1555443 G 100 BOR",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 8,12x0,91x76,2",
+   "order_no": "49160D 0,91",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 8,12x1,02x76,2",
+   "order_no": "49160D 1,02",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x0,76x76,2",
+   "order_no": "43025D 0,76",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 7,14x1,02x76,2",
+   "order_no": "48167D 1,02",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 8,12x0,91x120",
+   "order_no": "52168",
+   "note": ""
+  },
+  {
+   "name": "Abrazive Nozzle . 8,12x1,02x120",
+   "order_no": "52169",
+   "note": ""
+  },
+  {
+   "name": "Blue Anti Galling Lubricants",
+   "order_no": "400001-1",
+   "note": "Must be used for  all threads and  where is contact between two materials from stainless steel"
+  },
+  {
+   "name": "Lubricant Food Grade",
+   "order_no": "400034-2",
+   "note": "Must be used for all HP seals"
+  },
+  {
+   "name": "O - Ring Lubricant",
+   "order_no": "400015-1",
+   "note": "For O-rings on hydraulic parts"
+  },
+  {
+   "name": "Cover Splash",
+   "order_no": "",
+   "note": ""
+  },
+  {
+   "name": "Durobrick 155 x 100 x 1220",
+   "order_no": "DUROBRICK",
+   "note": "For cutting with pure water only  without abrasive"
+  },
+  {
+   "name": "Buna membrane for pump E5",
+   "order_no": "E 505 BN",
+   "note": "For membrane pump E5S"
+  },
+  {
+   "name": "Buna membrane for pump E1",
+   "order_no": "V 183 BN-1",
+   "note": "For membrane pump E1S"
+  },
+  {
+   "name": "Buna membrane for pump E4",
+   "order_no": "V 163 BN",
+   "note": "For membrane pump E4S"
+  }
+ ]
+}

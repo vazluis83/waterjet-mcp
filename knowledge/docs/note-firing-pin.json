@@ -1,0 +1,15 @@
+{
+ "id": "note-firing-pin",
+ "title": "Note: firing pin and shift actuator dimensions",
+ "kind": "note",
+ "language": "en",
+ "source_file": "Firing Pin.txt",
+ "pages": [
+  {
+   "page": 1,
+   "text": "The\nminimum size is 29.2mm.\n\n\nThe actuator with the magnet has a maximum size of 56.89mm and a minimum\nsize of 56.64mm.\""
+  }
+ ],
+ "format": "txt",
+ "has_page_images": false
+}

@@ -1,0 +1,17 @@
+{
+ "id": "procedure-pump-reset-oil",
+ "title": "Procedure: reset the pump oil & filter service counter after an oil change",
+ "kind": "procedure",
+ "language": "en/cs",
+ "vendor": "PTV",
+ "source_file": "Resetování po výměně oleje ČJ.docx",
+ "pages": [
+  {
+   "page": 1,
+   "text": "Resset after exchanging oil\n1 / Password Entry\n\nRight Arrow - main menu\nArrow down - roll on Password, confirm with right arrow\nMODE - opening password-arrays using 0-9 password /4 numbers/- enter / enter / confirm / must see a new access-level A, B or C according to the needs and the entered password\nESC - return to the main screen\n1/  Zadání  hesla\nŠipka doprava – hlavní menu\nŠipka dolů – najet na HESLO, potvrdit volu šipkou doprava\nMODE – otevření polí hesla- pomocí tlačítek 0-9 zadat heslo/4číslice/- enter/potvrzení/musí se zobrazit nová přístupová úroveň- A,B nebo C dle potřeby a zadávaného hesla\nESC – návrat do základní obrazovky\n2/Reset error mesage\nArrow  to right – main menu\n2/Resetování chybového hlášení\nŠipka doprava – hlavní menu\nArrow down – go on servicing and confirm with arrow right\nŠipka dolů – najet na servis , potvrdit volu šipkou doprava\nArrow down- go on  servis oil done , confirm with arrow right\nŠipka dolů - najet na  servis oil done, potvrdit  arrow  right "
+  }
+ ],
+ "format": "docx",
+ "images": 1,
+ "has_page_images": false
+}

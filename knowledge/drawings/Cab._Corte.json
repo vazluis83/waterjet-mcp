@@ -1,0 +1,28 @@
+{
+ "file": "Cab. Corte.dwg",
+ "version": {
+  "type": "r2007",
+  "hdr": "AC1021",
+  "description": "AutoCAD Release 2007",
+  "version": 27
+ },
+ "layers": [
+  "0",
+  "DEFPOINTS",
+  "Acrílico",
+  "Alumínio",
+  "Fechadura",
+  "Ferro",
+  "Inox",
+  "Madeira",
+  "Vidro"
+ ],
+ "entity_counts": {
+  "IMAGE": 2,
+  "LWPOLYLINE": 9,
+  "LINE": 139,
+  "ARC": 16,
+  "CIRCLE": 9
+ },
+ "texts": []
+}

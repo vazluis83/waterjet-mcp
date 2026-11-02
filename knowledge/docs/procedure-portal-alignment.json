@@ -1,0 +1,17 @@
+{
+ "id": "procedure-portal-alignment",
+ "title": "Procedure: aligning a twisted (crossed) gantry portal",
+ "kind": "procedure",
+ "language": "en/cs",
+ "vendor": "PTV",
+ "source_file": "Návod na vyrovnání  zkříženého portálu.docx",
+ "pages": [
+  {
+   "page": 1,
+   "text": "1 Remove  covers on both sides Y\nSejměte kryty Y vozíků\n2 Lose all vertical screws on both sides Y1 and Y2. Tight a little one screw on X1 and X2 marked with blue arrow. Do not lose horizontal screws !!!!\nPovolte všechny vertikální šrouby na obou dvou stranách Y1 a Y2 a utáhněte  trochu na každé straně Y1 a Y2  šroub označený modrou šipkou. Nepovolujte horizontální šrouby. Modře označené šrouby jsou na opačné straně než je upevněna Z osa.\n3\tDo  2x  referencing  \n\tZreferujte stroj\n4\tAfter  referencing   for all axe tight all screws\n\tPo zreferování utáhněte všechny povolené šrouby.\nNotice\nPoznámka\nThe best how to check if there is tension before this procedur eis use magnetic holder and clock onboth axe.\nNejlépe jak zkontrolovat zda je  pnutí na portále ( zkřížený portál) je použít magnetický stojánek a hodinky na obou dvou stranách stolu.\nDo referencing. Instal both clock and swith of motors. When there is different do  a procedure .\nZreferujte stroj. Instalujte magnetický stojánek a hodinky . Vypněte motory. Pokud se na hodinkách objeví rozdíl portál se kříží.\nWhen you do not have clock and magnetic  holder check this by finger.\nPokud nemáte magnetický stojánek a hodinky . Přiložte na vozíky prst a pokud ucítíte škubnutí  portále se kříží."
+  }
+ ],
+ "format": "docx",
+ "images": 5,
+ "has_page_images": false
+}

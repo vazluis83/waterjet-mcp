@@ -1,0 +1,94 @@
+{
+  "description": "Remote I/O of the Cnc886 control: Elsaco PROMOS line2 modules on CAN bus 2 (A1.X2 of the IPC). Addresses set on the modules: A2 = ADR 02, A3 = ADR 03, A5 = ADR 05. 24 V DC supply from U2 through fuses FU3 (servos / non-disconnecting outputs, T 4 A), FU4 (disconnecting outputs + pump I/O, T 3.15 A), FU5-FU8 (input circuits, X, Y, Z / hand wheel, T 1-2 A), FU9 (PLC supply, T 0.8 A). Potential (wire) numbers are given in column 'pot'. Sheets 29 (bus wiring), 31-33 (circuits), 52-54 (I/O tables).",
+  "modules": [
+    {
+      "designator": "-A2",
+      "type": "Elsaco CBIO-12 (EI 5852.22) - 8 DI 24 V DC + 8 DO relay NO/NC 8 A, CANopen",
+      "address": 2,
+      "terminal_board": "-A2.X In-Co02 (EI 5892.00)",
+      "function_group": "Standard equipment",
+      "digital_inputs": [
+        {"io": "DI 1.0", "pot": 200, "function": "State of emergency stop safety module (from FB1 XPS-AC5121 output)", "source": "-FB1", "sheet": 31},
+        {"io": "DI 1.1", "pot": 201, "function": "Electric drives OK (BTR/RTO ready contacts of drives GF2.7 and GF1.1 in series)", "source": "-GF2.7 / -GF1.1", "sheet": 31},
+        {"io": "DI 1.2", "pot": 202, "function": "Pressure of the air OK (pressure switch SP1)", "source": "-SP1 via -XT6", "sheet": 31},
+        {"io": "DI 1.3", "pot": 203, "function": "PRESS PUMP START button", "source": "-SB4.1", "sheet": 31},
+        {"io": "DI 1.4", "pot": 204, "function": "PRESS PUMP STOP button", "source": "-SB4.2", "sheet": 31},
+        {"io": "DI 1.5", "pot": 205, "function": "Drilling machine normal position Z1 / tools interchanger cover open (option, not used)", "sheet": 31},
+        {"io": "DI 1.6", "pot": 206, "function": "Drilling machine working position Z1 / tools interchanger cover closed (option, not used)", "sheet": 31},
+        {"io": "DI 1.7", "pot": 207, "function": "Grease cup empty level (central lubrication A90, option 90)", "source": "-A90 via -XT2.1", "sheet": 31}
+      ],
+      "digital_outputs": [
+        {"io": "DO 1.0", "pot": 250, "function": "Controlling system disconnect (to pump I/O cable XT7 and E-stop circuit)", "target": "-XT7", "sheet": 31},
+        {"io": "DO 1.1", "pot": 251, "function": "AXIS ENABLE - hardware enable of all servo drives (X3 ENABLE inputs)", "target": "-GF1.1 ... -GF2.8", "sheet": 31},
+        {"io": "DO 1.2", "pot": 252, "function": "WATER Z1 / tool cooling - cutting head ON/OFF valve YV11", "target": "-YV11 via -XT10", "sheet": 31},
+        {"io": "DO 1.3", "pot": 253, "function": "WATER Z2 (second head, not used)", "sheet": 31},
+        {"io": "DO 1.4", "pot": 254, "function": "Front protection shield up / front protection visor valve YV6", "target": "-YV6 via -XT6", "sheet": 31},
+        {"io": "DO 1.5", "pot": 255, "function": "DC el. drive up Z1 / drilling machine move / workpiece pneumatic release (option)", "sheet": 31},
+        {"io": "DO 1.6", "pot": 256, "function": "DC el. drive down Z1 / workpiece pneumatic fixation (option)", "sheet": 31},
+        {"io": "DO 1.7", "pot": 257, "function": "Central lubrication pump contactor KM5 (option 90)", "target": "-KM5", "sheet": 31}
+      ]
+    },
+    {
+      "designator": "-A3",
+      "type": "Elsaco CAIO-12 (EI 5842.00) - 12-slot analogue/binary carrier with plug-in modules, CANopen",
+      "address": 3,
+      "plug_in_modules": [
+        {"slot": "DI 2.9", "module": "-A3.DI9 EBI-12 (2 binary inputs)", "channels": [{"ch": "X0", "pot": 317, "function": "CENTRAL WATER JETS STOP button SB6 (and humidity sensor SQ18 chain)", "tag": "Tech_En"}, {"ch": "X1", "pot": 318, "function": "Reserve", "tag": "I_RESERV"}], "sheet": 32},
+        {"slot": "DI 2.10", "module": "-A3.DI10 EBI-12 (2 binary inputs)", "channels": [{"ch": "X0", "pot": 320, "function": "TECHNOLOGY PROGRAM STOP button SB5.2", "tag": "P_Stop"}, {"ch": "X1", "pot": 319, "function": "TECHNOLOGY PROGRAM START button SB5.1", "tag": "P_Start"}], "sheet": 32},
+        {"slot": "DO 2.8", "module": "-A3.DO8 EBO-10 (1 binary output 12-40 V DC 2 A)", "channels": [{"ch": "Y0", "pot": 315, "function": "TECHNOLOGY PROGRAM lamp SB5.HL"}], "sheet": 32},
+        {"slot": "AI 2.0", "module": "-A3.AI0 EAII-12 (1 analogue input 0-20 mA, 8 bit)", "channels": [{"ch": "+/AG", "pot": 301, "function": "HEIGHT CONTROL SYSTEM Z1 - Festo SMAT-8E sensor SQ14 (option 65)"}], "sheet": 32},
+        {"slot": "DO 2.2", "module": "-A3.DO2 EBO-10", "channels": [{"ch": "Y0", "pot": 303, "function": "Z axis height control system MOVE1 - valve YV14 (option 65)"}], "sheet": 32}
+      ],
+      "free_slots": "Slots 0-1, 3-7 and 11 of the CAIO-12 carrier are not populated in the standard configuration - candidates for added analogue/binary I/O (Elsaco EBI-12 inputs, EBO-10 outputs, EAII-12 analogue input modules)."
+    },
+    {
+      "designator": "-A5",
+      "type": "Elsaco CBIO-12 - 8 DI + 8 DO relay, CANopen (option 50 barrier safety module)",
+      "address": 5,
+      "terminal_board": "-A5.X In-Co01",
+      "digital_inputs": [
+        {"io": "DI 4.0", "pot": 500, "function": "State of light barrier receiver (XUSLZ)", "sheet": 33},
+        {"io": "DI 4.1", "pot": 501, "function": "State of light barriers safety module (FB2 XPS-AFL5130)", "sheet": 33},
+        {"io": "DI 4.2", "pot": 502, "function": "LOADING DEMAND button SB7", "sheet": 33},
+        {"io": "DI 4.3", "pot": 503, "function": "Front protection shield upstairs (limit)", "sheet": 33},
+        {"io": "DI 4.4", "pot": 504, "function": "Front protection shield downstairs (limit)", "sheet": 33},
+        {"io": "DI 4.5", "pot": 505, "function": "Front protection shield UP command", "sheet": 33},
+        {"io": "DI 4.6", "pot": 506, "function": "Front protection shield DOWN command", "sheet": 33},
+        {"io": "DI 4.7", "pot": 507, "function": "Reserve", "sheet": 33}
+      ],
+      "digital_outputs": [
+        {"io": "DO 4.0", "pot": 550, "function": "Light barriers safety module RESET (FB2)", "sheet": 33},
+        {"io": "DO 4.1", "pot": 551, "function": "Blockage switch mode ON/OFF (KM3)", "sheet": 33},
+        {"io": "DO 4.2", "pot": 552, "function": "Light-house RED (option 55)", "target": "-HL1 LCE-302W-RYG via -XT9", "sheet": 33},
+        {"io": "DO 4.3", "pot": 553, "function": "Light-house YELLOW", "sheet": 33},
+        {"io": "DO 4.4", "pot": 554, "function": "Light-house GREEN", "sheet": 33},
+        {"io": "DO 4.5", "pot": 555, "function": "Light barrier check test", "sheet": 33},
+        {"io": "DO 4.6", "pot": 556, "function": "LOADING DEMAND ACKNOWLEDGED lamp SB7.HL", "sheet": 33},
+        {"io": "DO 4.7", "pot": 557, "function": "Front protection shield DOWN / pneumatic door unlock", "sheet": 33}
+      ]
+    }
+  ],
+  "pump_io_interface": {
+    "description": "Relay-level handshake between the table control (PLC A2 + E-stop chain) and the JETS 3.8/60 pump PLC, cable -WS7 Olflex Classic 110 25G0.75 via terminal -XT7 (sheet 42, option 40). The RS485 pair (+RxTxD/-RxTxD, option 47) runs in the same cable to the SLC31 converter A43 on XCOM1 of the IPC (sheet 25).",
+    "signals": [
+      {"name": "COM_IN1", "direction": "table -> pump", "function": "PRESS PUMP ON (start)"},
+      {"name": "COM_IN2", "direction": "table -> pump", "function": "PRESS PUMP OFF (stop)"},
+      {"name": "COM_IN3", "direction": "table -> pump", "function": "PRESS PUMP HIGH PRESSURE (switch to HI preset)"},
+      {"name": "COM_IN4", "direction": "table -> pump", "function": "PRESS PUMP LOW PRESSURE (switch to LO preset)"},
+      {"name": "COM_OUT1", "direction": "pump -> table", "function": "PRESS PUMP IS ON"},
+      {"name": "COM_OUT2", "direction": "pump -> table", "function": "PRESS PUMP IS 'NO FAULT'"},
+      {"name": "COM_OUT3", "direction": "pump -> table", "function": "PRESS PUMP IS HIGH PRESSURE"},
+      {"name": "COM_OUT4", "direction": "pump -> table", "function": "PRESS PUMP IS LOW PRESSURE"},
+      {"name": "COM_OUT5", "direction": "pump -> table", "function": "HIGH PRESSURE PUMP ADJUSTMENT MODE (servicing mode / safety key locked)"},
+      {"name": "E-stop loop", "direction": "both", "function": "Pump total-stop contact in the XPS-AC5121 chain (XT7/6, pot 109/119)"}
+    ],
+    "pump_side_terminals": "XT7 pins 2-8 -> pump control distributor terminals TB1-TB5 / X4-X6 (pump manual 2.4, scheme PTV-011-D-0192 pages 4-10)"
+  },
+  "spare_capacity_for_additions": [
+    "PLC A2: all 8 DI and 8 DO are assigned; DI 1.5/1.6 and DO 1.3/1.5/1.6 serve options that are not installed on this machine (drilling machine, second head, DC Z drive) and are physically free at the terminal board A2.X (check Cnc886 PLC configuration before reuse).",
+    "PLC A5 (option 50): DI 4.7 reserve.",
+    "PLC A3 carrier: free module slots (see above).",
+    "Another CBIO-12/CAIO-12 module can be added on CAN 2 (new node address, termination at the last node - the bus currently ends at the abrasive feeder IFA61 'SET 5' on sheet 50).",
+    "Drive digital outputs DOUT1/DOUT2 (X3) of each SERVOSTAR are wired to the X3 connector but not used in the standard schematic (sheet 28)."
+  ]
+}

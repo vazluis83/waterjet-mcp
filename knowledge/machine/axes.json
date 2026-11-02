@@ -1,0 +1,95 @@
+{
+  "notes": [
+    "All servo drives are Kollmorgen SERVOSTAR 600 family (S403/S443, firmware V7.20, hardware 08.03) on CAN bus 1 of the Cnc886 control (CBAUD 1000 kbit/s). 'M' = master variant with CANopen, 'A' = slave/basic variant. Drive X3 connector carries the digital inputs (PSTOP, NSTOP, DI1 reference), DOUT1/2 and ENABLE; X2 = resolver, X5 = encoder emulation/input, X6 = power to motor, X4 = brake, X0/X1 = CAN in/out, X7 = 24 V logic supply, X8 = mains L1 L2 L3.",
+    "The AMC parameter dumps were taken from the drives (file names 'Amplifier X' etc.). Drive CAN addresses: X=8, Y1=7, Y2=6, Z=5, A=18, B=17. Running hours (TRUN) at dump time: X 18770 h, Y1 18874 h, Y2 3710 h (replaced drive), Z 22763 h, A 18764 h, B 18828 h.",
+    "A1/B1 drives report 'Drive 403 @ 300 V' (DC bus for 1 x 230 V supply, VBUSBAL 0) while X/Y1/Y2/Z report '@ 600 V' (3 x 400 V supply). On sheet 27 the A1 drive mains terminals are labelled L1, L2, L3/N.",
+    "Gearing: X master (GEARMODE 6) and Y1/Y2 follow the same parameter set except DIR and GP. Y1/Y2 are the two sides of the gantry (Y1 master side carries the limit switches, Y2 only a reference switch).",
+    "Motion task table (ORDER 1-3 and 192-194) is identical in all drives: homing/jog tasks used by the control."
+  ],
+  "axes": [
+    {
+      "axis": "X1",
+      "function": "Longitudinal gantry axis (portal travel along the 3000 mm direction)",
+      "drive": {"designator": "-GF1.1", "model": "SERVOSTAR 443M-C", "cat_no": "8F13-443M", "kollmorgen_no": "701198", "role": "CAN master", "can_address": 8, "sheets": [27, 28, 43], "parameter_file": "X"},
+      "motor": {"designator": "-M1", "model": "HPG-20A-XX-H-RES-SP (Harmonic Drive HPG-20A planetary gear motor, drive parameter MNAME HPG20A21H)", "feedback": "Resolver (FBTYPE 0, MRESPOLES 2), 12 poles (MPOLES 12)", "rated_current_A": 3, "peak_current_A": 9.8, "max_speed_rpm": 4800, "brake": "no (MBRAKE 0)", "power_cable": "-WLM1 Olflex-FD 855CP 4G1 via connector -XCM1 EPIC CIRCON LS1 F6 3+PE+4K", "feedback_cable": "-WSM1.1 Semoflex Roboschlepp 4x2x0.25 via -XCBQ1.1 EPIC M23 F6"},
+      "sensors": [
+        {"designator": "-SQ11", "type": "ifm IFA3004-APKG inductive, 1NC, 12-24 V", "function": "AXE X REFERENCE1 (homing switch) -> drive X3 DI1", "signal": "REFX1"},
+        {"designator": "-SQ12", "type": "Telemecanique XCM N2103L1 limit switch", "function": "N_STOP X1 -> drive X3 NSTOP", "signal": "NSTX1"},
+        {"designator": "-SQ13", "type": "Telemecanique XCM N2103L1 limit switch", "function": "P_STOP X1 -> drive X3 PSTOP", "signal": "PSTX1"},
+        {"designator": "-SQ14", "type": "Festo SMAT-8E-S50-IU-M8 analogue position sensor 0-20 mA", "function": "Height control system Z1 feedback -> PLC A3 AI 2.0 (option 65)"},
+        {"designator": "-SQ18", "type": "Balluff BCS00H7 capacitive, PNP 1NO 18-30 V", "function": "Humidity in Z axis (water ingress detection) -> PLC A3 DI 2.9/X0 input chain"},
+        {"designator": "-SP17", "type": "pressure switch", "function": "Central lubrication X1 pressure OK (option 90)"}
+      ],
+      "actuators": [
+        {"designator": "-YV11", "type": "Norgren V60A413A-A2-13J 5/2 solenoid valve", "function": "WATER Z1 (cutting head ON/OFF valve air pilot) <- PLC A2 DO 1.2"},
+        {"designator": "-YV14", "type": "Norgren V60A513A-A2-13J 5/3 solenoid valve", "function": "Z axis height control system MOVE1 <- PLC A3 DO 2.2 (option 65)"}
+      ],
+      "wiring": {"terminal_strip": "-XT10 in +MX0", "field_connectors": "-XC10 and -XC11 Weidmuller SAI-6-M 5P M12 passive distributors in +MX1, cables -WS10.1/-WS10.2", "sheets": [35, 36, 43, 67, 100]}
+    },
+    {
+      "axis": "Y1",
+      "function": "Cross axis, carriage on the gantry beam (2000 mm direction) - master side",
+      "drive": {"designator": "-GF1.3", "model": "SERVOSTAR 403A-C", "cat_no": "8F13-403A", "kollmorgen_no": "701199", "role": "slave on CAN", "can_address": 7, "sheets": [28, 44], "parameter_file": "Y1"},
+      "motor": {"designator": "-M3", "model": "HPG-20A-XX-H-RES-SP (MNAME HPG20A21H)", "feedback": "Resolver", "rated_current_A": 3, "peak_current_A": 9.8, "max_speed_rpm": 4800, "brake": "no", "power_cable": "-WLM3 Olflex-FD 855CP 4G1 via -XCM3", "feedback_cable": "-WSM3.1 Semoflex Roboschlepp 4x2x0.25 via -XCBQ3.1"},
+      "sensors": [
+        {"designator": "-SQ31", "type": "Telemecanique XS612B1PBL2 inductive PNP 1NC", "function": "AXE Y REFERENCE1 -> drive DI1", "signal": "REFY1"},
+        {"designator": "-SQ32", "type": "XCM N2103L1", "function": "N_STOP Y1", "signal": "NSTY1"},
+        {"designator": "-SQ33", "type": "XCM N2103L1", "function": "P_STOP Y1", "signal": "PSTY1"}
+      ],
+      "wiring": {"terminal_strip": "-XT30", "field_connector": "-XC30 SAI-4-M 5P M12 in +MY1, cable -WS30", "sheets": [37, 44, 68, 112]}
+    },
+    {
+      "axis": "Y2",
+      "function": "Second Y carriage drive (gantry synchronised slave side)",
+      "drive": {"designator": "-GF1.4", "model": "SERVOSTAR 403A-C", "cat_no": "8F13-403A", "role": "slave on CAN", "can_address": 6, "sheets": [28, 45], "parameter_file": "Y2"},
+      "motor": {"designator": "-M4", "model": "HPG-20A-XX-H-RES-SP", "feedback": "Resolver", "power_cable": "-WLM4 via -XCM4", "feedback_cable": "-WSM4.1 via -XCBQ4.1"},
+      "sensors": [
+        {"designator": "-SQ41", "type": "Telemecanique XS612B1PBL2 inductive PNP 1NC", "function": "AXE Y REFERENCE2 -> drive DI1", "signal": "REFY2"}
+      ],
+      "wiring": {"terminal_strip": "-XT40", "field_connector": "-XC40 SAI-4-M 5P M12 in +MY2, cable -WS40", "sheets": [38, 45, 69]}
+    },
+    {
+      "axis": "Z1",
+      "function": "Vertical axis carrying the cutting head",
+      "drive": {"designator": "-GF1.5", "model": "SERVOSTAR 403A-C", "cat_no": "8F13-403A", "role": "slave on CAN", "can_address": 5, "sheets": [28, 46], "parameter_file": "Z"},
+      "motor": {"designator": "-M5", "model": "Kollmorgen AKM24C-NBB synchronous servo motor with holding brake (MNAME AKM24C, MBRAKE 1)", "feedback": "Resolver (cable GT3-0130-60-560/T1BKX-3M), 1000 lines encoder emulation (ENCLINES 1000)", "rated_current_A": 1.42, "peak_current_A": 5.7, "max_speed_rpm": 5500, "velocity_limit_rpm": 3000, "brake": "yes, 24 V via X4 BRAKE+/BRAKE-", "power_cable": "-WLM5 Olflex-FD 855CP 7G1 (3 phases + PE + 2 brake wires) via -XCM5", "feedback_cable": "-WSM5.1 Semoflex Roboschlepp 4x2x0.25 via -XCBQ5.1"},
+      "sensors": [
+        {"designator": "-SQ51", "type": "Nordela IAF08BBDKX-62647 inductive PNP 1NO 10-30 V", "function": "AXE Z REFERENCE1 -> drive DI1 (IN1MODE 12)", "signal": "REFZ1"},
+        {"designator": "-SQ52", "type": "XCM N2103L1", "function": "N_STOP Z1 -> drive X3 NSTOP (IN4MODE 3)"},
+        {"designator": "-SQ53", "type": "XCM N2103L1", "function": "P_STOP Z1 -> drive X3 PSTOP (IN3MODE 2)"}
+      ],
+      "wiring": {"terminal_strip": "-XT50 / -XT50.1", "field_connector": "-XC50 / -XC50.1 (ZP 2.5 plug-in terminals), cable -WS50 Semoflex D-PVC 12x0.5", "sheets": [39, 40, 46, 70, 113, 114]}
+    },
+    {
+      "axis": "A1",
+      "function": "Dynamic water jet (ProgressJet 5-axis head) tilt axis A",
+      "drive": {"designator": "-GF2.7", "model": "SERVOSTAR 403M-C", "cat_no": "8F13-403M", "kollmorgen_no": "701217", "role": "CAN master for the A/B pair", "can_address": 18, "bus_voltage": "300 V class (single-phase supply)", "sheets": [27, 28, 47], "parameter_file": "A"},
+      "motor": {"designator": "-M7", "model": "Harmonic Drive FHA-14C-100-D200-K-SP (hollow-shaft actuator, ratio 100:1, 200 V class)", "feedback": "Incremental encoder A/B/Z 2000 lines with Hall signals U/V/W (FBTYPE 12, ENCLINES 2000, MNAME NN = user motor data)", "rated_current_A": 1.06, "peak_current_A": 3.2, "max_speed_rpm": 6000, "brake": "no", "power_cable": "-WLM7 Olflex-FD 855CP 4G1 via -XCM7 EPIC CIRCON LS1 D6", "feedback_cable": "-WSM7 (5x(2x0.14)+(2x0.5)) AWM 2464 to drive X5 via -XCBQ7 EPIC M23 D6-F6 and D-sub15"},
+      "sensors": [
+        {"designator": "-SQ72", "type": "Balluff BES-517-398-V0-03 inductive PNP 1NO", "function": "AXE A REFERENCE1", "signal": "REFA1"}
+      ],
+      "wiring": {"terminal_strip": "-XT70 / -XC70.1 (72/VDE terminal block) in +MAB1, cable -WS70.1 Semoflex D-PVC 7x0.5", "sheets": [39, 41, 47, 71, 115]}
+    },
+    {
+      "axis": "B1",
+      "function": "Dynamic water jet (ProgressJet 5-axis head) tilt axis B",
+      "drive": {"designator": "-GF2.8", "model": "SERVOSTAR 403 (listed as 403A-C slave B1 in the device list, 403M-C on sheet 48)", "cat_no": "8F13-403A/403M", "role": "slave of A1", "can_address": 17, "bus_voltage": "300 V class", "sheets": [28, 48], "parameter_file": "B"},
+      "motor": {"designator": "-M8", "model": "Harmonic Drive FHA-14C-100-D200-K-SP", "feedback": "Incremental encoder 2000 lines + Hall (FBTYPE 12)", "rated_current_A": 1.06, "peak_current_A": 3.2, "power_cable": "-WLM8 via -XCM8", "feedback_cable": "-WSM8 via -XCBQ8"},
+      "sensors": [
+        {"designator": "-SQ82", "type": "Balluff BES-517-398-V0-03", "function": "AXE B REFERENCE1", "signal": "REFB1"}
+      ],
+      "wiring": {"terminal_strip": "-XT70 / -XC70.1 in +MAB1", "sheets": [41, 48, 72]}
+    },
+    {
+      "axis": "Abrasive feeder Z1 (option 20)",
+      "function": "Metering of abrasive (garnet) to the cutting head - not a CNC axis but a CAN-controlled integrated stepper drive",
+      "drive": {"designator": "-M20", "model": "Berger Lahr IFA61/2CAN IS DS/3DCB68/O001RPP41 integrated stepper motor with CANopen", "cat_no": "48FB-1000", "can_bus": "CAN 2 (same bus as the PLC I/O modules), 24 V DC from fuse FU10 (T 6.3 A)", "sheets": [30, 49, 50]},
+      "sensors": [
+        {"designator": "-SQ20.1", "type": "Telemecanique XS608B1PBL2 inductive PNP 1NC", "function": "Abrasive feeder P_STOP1"},
+        {"designator": "-SQ20.2", "type": "Telemecanique XS608B1PBL2", "function": "Abrasive feeder N_STOP1"}
+      ],
+      "wiring": {"connector": "-XC20 Weidmuller HDC Kit HA 04.406 M (Harting-type 4x10 A + PE) on the Z trolley, cable -WS20 Semoflex Roboschlepp 2x1+(2x0.25)", "sheets": [49, 50, 111]}
+    }
+  ],
+  "unused_in_this_configuration": ["X2 (second X drive, GF1.2)", "Z2 (GF1.6)", "A2/B2 (GF2.9/2.10)", "C2 spindle", "Drilling machine Z1/Z2 (option 60/61)", "Vacuum abrasive suction (62/63)", "DC drive Z (66/67)"]
+}

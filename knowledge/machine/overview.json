@@ -1,0 +1,84 @@
+{
+  "machine": {
+    "type": "WJ3020B 1Z-PJ-NL",
+    "description": "PTV 'New Line' (NL) gantry water jet cutting table, 3000 x 2000 mm working area, one Z axis (1Z) carrying a ProgressJet 5-axis dynamic cutting head (PJ, axes A1/B1), abrasive feeder on Z1 and optional height-control sensor.",
+    "manufacturer": "PTV, spol. s r.o., Csl. armady 23, 253 01 Hostivice, Czech Republic, tel. +420 220 981 430",
+    "distributor_owner": "A. Moreira Cadete, Lda. (AMC), Portugal - authorised PTV distributor; the drawings carry its title block and the electrical documentation is addressed 'CADETE - P'",
+    "project_number": "042-340",
+    "electrical_documentation": "PTV-V52-N-0001 (file PTV-052-N-0001 (UD) EN), 126 sheets, completed 08.10.2008, last update 06.11.2012, editor Fedyszyn Milan",
+    "control_system": "AREM PRO Cnc886 running on an Advantech IPC 6606 CZ industrial PC (Windows 10 IoT Enterprise with IntervalZero RTX real-time extension). CAN bus 1 to the servo drives, CAN bus 2 to the Elsaco PROMOS line2 PLC I/O modules and the abrasive feeder, RS232/RS485 to the high-pressure pump, RS422 to the AHW886 hand wheel.",
+    "high_pressure_pump": "PTV JETS 3.8/60-COMPACT, 37 kW, 4100 bar (60 000 psi), 3.8 l/min, one H2O Jet 60K intensifier (manual M-01/2007-EN)",
+    "variant_options_installed_or_wired": {
+      "=OPT.00": "Standard equipment 'NEW LINE'",
+      "=OPT.20": "Abrasive feeder Z1 (Berger Lahr IFA61 CAN stepper, sheets 49-50)",
+      "=OPT.30": "Remote control hand wheel AHW886 via RS422 converter SLC31 (sheets 25-26)",
+      "=OPT.40": "High-pressure pump I/O (relay) communication (sheet 42)",
+      "=OPT.47": "High-pressure pump PTV RS485 communication via SLC31 converter A43 (sheets 25, 42)",
+      "=OPT.50": "Barrier safety module A5 (CBIO-12) (sheet 33)",
+      "=OPT.51": "Light barrier XUSLB/XUSLZ with XPS-AFL5130 safety module FB2 (sheet 24)",
+      "=OPT.55": "Light-house (signal tower LCE-302W-RYG) (sheet 30)",
+      "=OPT.65": "Height control system Z1 (Festo SMAT-8E analogue sensor + valve YV14) (sheets 32, 36)",
+      "=OPT.70": "Catcher water level control (valves YV7.1/YV7.2, selector SB8) (sheets 22, 34)",
+      "=OPT.90": "Central lubrication A90 (sheet 17)",
+      "=AXS.X1, Y1, Y2, Z1, A1, B1": "Installed axes (X2, Z2, A2, B2, C2 appear in the generic PTV schematic as unused options)"
+    },
+    "location_codes": {
+      "+MX0": "Main electric cabinet",
+      "+PAN": "Operator panel",
+      "+PAE": "External operator panel (PC, monitor, keyboard)",
+      "+EXTe": "Electrical exterior (field devices)",
+      "+EXTm": "Mechanical exterior",
+      "+MX1": "Wiring box X axis trolley 1",
+      "+MY1 / +MY2": "Wiring boxes Y axis trolleys",
+      "+MZ1": "Wiring connection box Z axis trolley 1",
+      "+MAB1": "Wiring box dynamic water jet A1/B1"
+    }
+  },
+  "power_supply": {
+    "system": "TN-S 3+N+PE 400/230 V 50-60 Hz (alternatively TN-C 3+PEN)",
+    "installed_power_kw": 5.5,
+    "recommended_protection": "25 A / B circuit breaker or PN 000 gG 25 A fuse",
+    "supply_cable": "5 x 2.5 mm2 (CMSM 5Cx2,5 used on sheet 15)",
+    "control_voltage": "24 V DC from U2 DNR240PS24-I (10 A, 240 W)",
+    "overvoltage_protection": "Not included in the machine - 2nd degree surge protection must be provided by the installation",
+    "max_busbar_short_circuit_current_kA": 10,
+    "cabinet_ip": "IP54",
+    "cos_phi": ">0.85",
+    "main_switch": "QS1 NLT 16/3E/Z33 (lockable)",
+    "rcd": "FI1 PHF7-25/4/003-G 25 A / 30 mA, 4-pole (Moeller)",
+    "emc_filter": "ZB1 4ELF16VY/D 400 V 16 A 3L+N+PE",
+    "servo_supply_breaker": "QF1 PL7-C13/3 (13 A, 3-pole) with ZP-NHK auxiliary contact, feeding the drives through E-stop contactors KM1/KM2",
+    "ups": "U1 APC Back-UPS CS650 feeding the IPC",
+    "environment": "+5 to +30 C ambient, 30-90 % RH, max 1000 m altitude, dust < 20 mg/m3",
+    "note": "The high-pressure pump has its own 37 kW supply: CYKY 4x25/5x25 mm2 (up to 15 m) protected 100 A, or 4x35/5x35 mm2 protected 125 A; 80 A knife fuses inside the pump distributor; plus a 3x400 V 25 A and 230 V 25 A service socket per pump manual 1.2.2."
+  },
+  "pump_specs_summary": {
+    "model": "JETS 3.8/60-COMPACT",
+    "max_pressure_bar": 4100,
+    "max_flow_l_min": 3.8,
+    "intensifier": "1 x 60K (optionally 40K: 6.2 l/min)",
+    "main_motor": "37 kW, 3x400/230 V, 50 Hz, 1500 rpm (Siemens)",
+    "cooler_motor": "1.5 kW, 900 rpm",
+    "hydraulic_oil": "160 l (170 l for change) SHELL TELLUS 46 / OHHM 46 / Chevron AW-46 / Exxon Nuto H-46 / Texaco Rando HD-46; max 52 C working, 215 bar max",
+    "hydraulic_pump": "Parker PV063 63 cm3/rev with proportional valve",
+    "inlet_water": "3.5-6 bar, pH 6-8, filtered 1 um + 0.5 um cascade, G3/4 connections",
+    "hp_output": "UNF 3/4-16 internal thread",
+    "dry_weight_kg": 1800,
+    "dimensions_mm": "1690 W x 1350 D x 1550 H",
+    "stroke_rate": "80-90 cycles/min normal, 110/min maximum"
+  },
+  "safety_chain": {
+    "emergency_stop_module": "FB1 Telemecanique XPS-AC5121 (sheet 23) - monitors SB2 panel E-stop (XB5AS542 + ZBE102 double contact), the pump E-stop line via XT7 (sheet 42) and the hand wheel E-stop via XT5; contacts 13-14/23-24/33-34 drive KM1 and KM2",
+    "contactors": "KM1 + KM2 LC1D18BD (24 V DC coils) in series switch the servo drive mains (sheet 15: L1.1/L2.1/L3.1 -> 2L1.1/2L2.1/2L3.1) and signal 'state of emergency stop safety module' to PLC DI 1.0",
+    "light_barrier": "Optional FB2 XPS-AFL5130 with XUSLB transmitter / XUSLZ receiver and KM3/KM4 (sheets 23-24, 33)",
+    "drive_limit_switches": "Every linear axis has P_STOP / N_STOP hardware limit switches (XCM N2103L1) wired to the SERVOSTAR X3 PSTOP/NSTOP inputs, plus an inductive reference switch wired to the drive (sheets 28, 35-40)",
+    "pump_total_stop": "S1 mushroom button on the pump panel; machine SB4 PRESS PUMP START/STOP buttons act through the PLC and the pump I/O cable (sheet 42)",
+    "working_hours_counter": "UX1 Bauser 609.2 (24 V DC) counts hours while the safety chain is closed",
+    "warning": "Before any electrical work: switch QS1 off and lock it, bleed the high-pressure system to zero (pump 'STOP', button '0'), wait for the drive DC bus to discharge. Only qualified personnel may work on the 400 V and 600 V DC bus parts (manual pump 4.1, electrical tech report 11)."
+  },
+  "sources": {
+    "electrical": "ptv-electrical sheets 1-14 (technical report), 15-18 (power), 19-20 (control system), 21-22 (operator panel), 23-24 (safety), 25-26 (communication, hand wheel), 27-28 (drives), 29-33 (PLC), 34-50 (external circuits & drives), 51-54 (PLC I/O tables), 55-59 (cabinet layout), 60-63 (used devices), 64-81 (terminals, connectors, cables, buttons, sensors, valves), 82-98 (cable wiring diagrams), 99-121 (terminal tables XT1..XT50.1, XC7..XC70.1, XCBQ/XCM motor connectors), 122-126 (component list with manufacturer part numbers)",
+    "pump": "pump-manual (M-01/2007-EN) chapters 1-6; hydraulic scheme PTV-011-D-0173 on pages 54-55; electrical scheme PTV-011-D-0192 on pages 57-65; spare parts pages 69-81",
+    "intensifier": "intensifier-manual IMO-1030 Rev C"
+  }
+}

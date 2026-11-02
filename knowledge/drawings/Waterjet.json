@@ -1,0 +1,22 @@
+{
+ "file": "Waterjet.dwg",
+ "version": {
+  "type": "r2010",
+  "hdr": "AC1024",
+  "description": "AutoCAD Release 2010",
+  "version": 29
+ },
+ "layers": [
+  "0",
+  "DEFPOINTS",
+  "LOI",
+  "TELHA",
+  "Estrutura Ferro",
+  "MAQUINAS",
+  "DIVISÓRIA"
+ ],
+ "entity_counts": {
+  "LWPOLYLINE": 11603
+ },
+ "texts": []
+}

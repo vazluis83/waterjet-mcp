@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+# never commit the pump service password or other private notes
+private/
+**/Pump Password.txt

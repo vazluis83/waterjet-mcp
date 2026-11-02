@@ -1,0 +1,52 @@
+{
+ "file": "bellows X.dwg",
+ "version": {
+  "type": "r2018",
+  "hdr": "AC1032",
+  "description": "AutoCAD Release 2018",
+  "version": 33
+ },
+ "layers": [
+  "0",
+  "DEFPOINTS",
+  "Ferro",
+  "Alumínio",
+  "Inox",
+  "Madeira",
+  "Acrílico",
+  "Fechadura",
+  "Vidro",
+  "Chapa Zincor",
+  "Cotas",
+  "1__TEXT_ACI_7",
+  "2__LINE_ACI_7",
+  "3__LINE_ACI_5",
+  "4__LINE_ACI_136",
+  "5__TEXT_ACI_136"
+ ],
+ "entity_counts": {
+  "LINE": 76,
+  "LWPOLYLINE": 17,
+  "MTEXT": 10,
+  "INSERT": 1,
+  "ATTRIB": 6
+ },
+ "texts": [
+  "280",
+  "270",
+  "X=3300",
+  "\\PInternal lamella",
+  "Welding zone of bellows",
+  "Upper surface",
+  "5",
+  "35",
+  "35",
+  "Waterproof bellows in design:- without end frames- with plastic reinforcing lamellas",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]"
+ ]
+}
