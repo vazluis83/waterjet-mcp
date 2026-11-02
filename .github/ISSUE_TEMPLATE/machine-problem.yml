@@ -1,0 +1,56 @@
+name: Machine problem / troubleshooting record
+description: Record a fault on the cutting table or the high-pressure pump so the history stays with the documentation
+title: "[machine] "
+labels: ["machine-log"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Lock out the main switch and bleed the high-pressure system before inspecting anything.
+        The `troubleshoot` prompt of the MCP server can help fill this in.
+  - type: dropdown
+    id: part
+    attributes:
+      label: Affected part
+      options:
+        - Cutting table - axis X1
+        - Cutting table - axis Y1 / Y2
+        - Cutting table - axis Z1
+        - Cutting table - 5-axis head A1 / B1
+        - Cutting table - PLC / control / HMI (Cnc886)
+        - Cutting table - safety chain / E-stop / light barrier
+        - Abrasive feeder
+        - High-pressure pump - hydraulics / oil
+        - High-pressure pump - intensifier / check valves / seals
+        - High-pressure pump - bleed-down valve / HP piping
+        - Cutting head / ON-OFF valve / nozzle
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date and machine hours (pump Mth / UX1 counter)
+      placeholder: "2026-11-02, pump 20 450 Mth"
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Symptom
+      description: Exact alarm or display text, drive error number, what the operator saw or heard.
+    validations:
+      required: true
+  - type: textarea
+    id: checked
+    attributes:
+      label: What was checked and measured
+      description: Terminals, signals, pressures, temperatures, LEDs, with the sheet or page used.
+  - type: textarea
+    id: cause
+    attributes:
+      label: Cause found and action taken
+      description: Parts replaced (order numbers), settings changed, procedure followed.
+  - type: textarea
+    id: followup
+    attributes:
+      label: Follow-up needed
+      description: Spare parts to order, recurring checks, documentation to update.

@@ -1,0 +1,52 @@
+name: Documentation correction
+description: A value, sheet number, part number or description in the knowledge base is wrong or missing
+title: "[docs] "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when a tool answer does not match the machine or the original manual.
+        Curated data lives in `knowledge/machine/*.json` and `knowledge/drives/servostar_params.json`;
+        extracted page text lives in `knowledge/docs/*.json`.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Electrical schematics (ptv-electrical)
+        - Axes / servo drives / SERVOSTAR parameters
+        - PLC I/O map
+        - Component list / cables
+        - Pump (JETS 3.8/60) data or procedures
+        - Intensifier / high-pressure parts
+        - Spare parts list
+        - Drawings
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool and arguments that gave the wrong answer
+      placeholder: 'find_component {"query":"SQ14"}'
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What the knowledge base says
+      description: Paste the relevant part of the answer.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What is correct, and the source
+      description: Document id, sheet/page number, or what was measured on the machine.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Impact
+      options:
+        - label: This error could lead to an unsafe action (wrong torque, wrong terminal, wrong pressure)

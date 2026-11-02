@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How to use the server
+    url: https://github.com/vazluis83/waterjet-mcp#readme
+    about: Installation, tool list and knowledge-base layout are in the README.

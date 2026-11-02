@@ -1,0 +1,28 @@
+name: Server bug or feature request
+description: A problem with the MCP server itself, or a new tool / resource you would like
+title: "[server] "
+labels: ["server"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Bug (tool error, wrong result format, crash)
+        - New tool or resource
+        - Search quality
+        - Build / knowledge-base script
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: For bugs include the tool name, arguments, and the error or output; for features describe the question the assistant could not answer.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Node 18.17, Windows 11, Claude Code / Claude Desktop"

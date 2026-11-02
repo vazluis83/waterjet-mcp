@@ -1,0 +1,56 @@
+name: Hardware addition proposal
+description: Plan a new sensor, actuator, I/O or other device on the table or pump
+title: "[hardware] "
+labels: ["hardware"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The `plan-hardware-addition` prompt and the `get_plc_io` (module `spare`) and `get_procedure adding-io-or-hardware`
+        tools list the free I/O points, fuses and cable types used on this machine.
+  - type: input
+    id: device
+    attributes:
+      label: Device to add
+      placeholder: "Float switch for catcher water level, 24 V PNP"
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: What the machine should do with it (interlock, display, logging, automatic action).
+    validations:
+      required: true
+  - type: dropdown
+    id: location
+    attributes:
+      label: Mounting location
+      options:
+        - Main cabinet (+MX0)
+        - Operator panel (+PAE / +PAN)
+        - X trolley box (+MX1)
+        - Y trolley boxes (+MY1 / +MY2)
+        - Z trolley box (+MZ1)
+        - 5-axis head box (+MAB1)
+        - Catcher tank / table frame
+        - High-pressure pump cabinet
+        - Machine room
+  - type: textarea
+    id: io
+    attributes:
+      label: Electrical needs
+      description: Supply voltage and current, signal type (DI/DO/AI 0-20 mA/RS485/CAN), number of I/O points, cable length and whether it runs in the energy chain.
+  - type: textarea
+    id: plan
+    attributes:
+      label: Proposed connection
+      description: Module and I/O address, terminal strip, fuse, potential numbers, sheet reference. Leave blank to have it proposed.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: The device is part of a guard, interlock or emergency stop function (must go into the XPS safety chain, not only the PLC)
+        - label: Requires a change in the Cnc886 PLC configuration
+        - label: Requires a change on the pump side (JETS PLC, XT7 interface)
